@@ -25,8 +25,8 @@ class WeatherClient: ObservableObject {
         // Create URLRequest and set headers if needed
         var request = URLRequest(url: url)
         // Add API key or other required header information here
-        request.setValue("17d1afe6efmsh91ce94b0d9932c4p1ab1bbjsn9d193ebd5502", forHTTPHeaderField: "X-RapidAPI-Key")
-        request.setValue("weatherapi-com.p.rapidapi.com", forHTTPHeaderField: "X-RapidAPI-Host")
+        request.setValue("YOUR_API_KEY", forHTTPHeaderField: "X-RapidAPI-Key")
+        request.setValue("YOUR_API_HOST", forHTTPHeaderField: "X-RapidAPI-Host")
         
         // Create a data task and handle the response
         let dataTask = URLSession.shared.dataTask(with: request) { data, response, error in
