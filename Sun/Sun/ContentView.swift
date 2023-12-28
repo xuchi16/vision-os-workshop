@@ -22,10 +22,10 @@ struct ContentView: View {
     @Environment(\.dismissImmersiveSpace) private var dismissImmersiveSpace
     
     var body: some View {
-        Text("Window, Volume and Immersive View")
+        Text("Window, Volume and Space")
             .font(.title)
         
-        Toggle("Window view", isOn: $isWindowShown)
+        Toggle("Window", isOn: $isWindowShown)
             .toggleStyle(.button)
             .onChange(of: isWindowShown) { _, show in
                 if show {
@@ -35,7 +35,7 @@ struct ContentView: View {
                 }
             }
         
-        Toggle("Volume View", isOn: $isVolumeWindowShown)
+        Toggle("Volume", isOn: $isVolumeWindowShown)
             .toggleStyle(.button)
             .onChange(of: isVolumeWindowShown) { _, show in
                 if show {
@@ -45,7 +45,7 @@ struct ContentView: View {
                 }
             }
         
-        Toggle("Immersive Space", isOn: $isImmersiveSpaceShown)
+        Toggle("Space", isOn: $isImmersiveSpaceShown)
             .toggleStyle(.button)
             .onChange(of: isImmersiveSpaceShown) { _, show in
                 Task {
