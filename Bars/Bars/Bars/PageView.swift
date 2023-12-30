@@ -14,17 +14,21 @@ struct PageView: View {
         NavigationSplitView() {
             List {
                 NavigationLink {
+                    Text(dataModel.description)
+                    Text("Recent view")
                 } label: {
                     Label("Recent", systemImage: "clock")
                 }
                 NavigationLink {
+                    Text(dataModel.description)
+                    Text("Favorite view")
                 } label: {
                     Label("Favorite", systemImage: "suit.heart")
                 }
             }
             .navigationTitle(dataModel.labelName)
         } detail: {
-            Text(dataModel.description)
+            Text("Select an item")
         }
     }
 }

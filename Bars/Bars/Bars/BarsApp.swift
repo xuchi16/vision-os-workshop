@@ -16,6 +16,8 @@ struct BarsApp: App {
         WindowGroup {
             ContentView()
                 .environment(viewModel)
+            
+            // PlainContentView()
         }
     }
 }

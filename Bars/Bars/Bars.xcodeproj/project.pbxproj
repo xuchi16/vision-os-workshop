@@ -66,10 +66,10 @@
 				C28B7FF72B3DCE3B00695D45 /* ContentView.swift */,
 				C2F6E1612B3EA74500B26406 /* PlainContentView.swift */,
 				C2F6E15F2B3EA23B00B26406 /* ViewModel.swift */,
+				C2F6E1632B40134800B26406 /* PageView.swift */,
 				C28B7FFB2B3DCE3D00695D45 /* Assets.xcassets */,
 				C28B80002B3DCE3D00695D45 /* Info.plist */,
 				C28B7FFD2B3DCE3D00695D45 /* Preview Content */,
-				C2F6E1632B40134800B26406 /* PageView.swift */,
 			);
 			path = Bars;
 			sourceTree = "<group>";
