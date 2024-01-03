@@ -8,8 +8,8 @@
 import Foundation
 
 func getMatchData() -> MatchModel {
-    var video = getVideo()
-    var home = MatchTeam(name: "Fulham",
+    let video = getVideo()
+    let home = MatchTeam(name: "Fulham",
                          logoPath: "Fulham",
                          lineup: ["14. Bobby Reid",
                                   "17. Alex Iwobi",
@@ -29,7 +29,7 @@ func getMatchData() -> MatchModel {
                          cards: 4,
                          offsides: 4,
                          corners: 5)
-    var away = MatchTeam(name: "Arsenal",
+    let away = MatchTeam(name: "Arsenal",
                          logoPath: "Arsenal",
                          lineup: ["9.  Gabriel Jesus",
                                   "11. Gabriel Martinelli",

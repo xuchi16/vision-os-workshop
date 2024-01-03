@@ -12,11 +12,8 @@ import RealityKitContent
 struct ContentView: View {
     
     @Environment(PlayerModel.self) private var playerModel
-    
+
     @State private var isGoalPanelVisible = Visibility.hidden
-    @State private var isGoalViewShown = false;
-    @Environment(\.openWindow) private var openWindow
-    @Environment(\.dismissWindow) private var dismissWindow
     
     var match: MatchModel
     

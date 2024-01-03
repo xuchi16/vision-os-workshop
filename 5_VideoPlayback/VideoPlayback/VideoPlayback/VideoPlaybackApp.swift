@@ -11,7 +11,6 @@ import SwiftUI
 struct VideoPlaybackApp: App {
     
     @State private var playerModel = PlayerModel()
-    
     private var match = getMatchData()
     
     var body: some Scene {
@@ -25,7 +24,9 @@ struct VideoPlaybackApp: App {
             GoalView()
         }
         .windowStyle(.volumetric)
+        
+        WindowGroup {
+            SimplePlayerView()
+        }
     }
-    
-
 }

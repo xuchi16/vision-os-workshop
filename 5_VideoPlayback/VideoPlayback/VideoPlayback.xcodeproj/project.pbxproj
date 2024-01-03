@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C21B48AF2B45841E00989C74 /* SimplePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21B48AE2B45841E00989C74 /* SimplePlayerView.swift */; };
 		C2A5FD6D2B455F0A00100C64 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A5FD6C2B455F0A00100C64 /* StatsView.swift */; };
 		C2A5FD702B4563E300100C64 /* LineupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A5FD6F2B4563E300100C64 /* LineupView.swift */; };
 		C2A5FD762B4570D700100C64 /* MatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A5FD752B4570D700100C64 /* MatchModel.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C21B48AE2B45841E00989C74 /* SimplePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePlayerView.swift; sourceTree = "<group>"; };
 		C2A5FD6C2B455F0A00100C64 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		C2A5FD6F2B4563E300100C64 /* LineupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineupView.swift; sourceTree = "<group>"; };
 		C2A5FD752B4570D700100C64 /* MatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchModel.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				C2F7951E2B44282D0024A9AB /* GoalView.swift */,
 				C2A5FD6C2B455F0A00100C64 /* StatsView.swift */,
 				C2A5FD6F2B4563E300100C64 /* LineupView.swift */,
+				C21B48AE2B45841E00989C74 /* SimplePlayerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				C2A5FD6D2B455F0A00100C64 /* StatsView.swift in Sources */,
 				C2A5FD762B4570D700100C64 /* MatchModel.swift in Sources */,
 				C2F7951F2B44282D0024A9AB /* GoalView.swift in Sources */,
+				C21B48AF2B45841E00989C74 /* SimplePlayerView.swift in Sources */,
 				C2A5FD7B2B45736D00100C64 /* MockData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

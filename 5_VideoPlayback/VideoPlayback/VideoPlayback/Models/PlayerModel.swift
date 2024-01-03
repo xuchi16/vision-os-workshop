@@ -41,7 +41,6 @@ class PlayerModel {
             }
         }
         interstitialController.events = interstitialEvents
-    
     }
     
     
