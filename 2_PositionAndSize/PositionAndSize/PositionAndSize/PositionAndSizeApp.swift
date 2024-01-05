@@ -22,7 +22,7 @@ struct PositionAndSizeApp: App {
                 minHeight: defaultHeight * shrinkRatio, maxHeight: defaultHeight * expandRatio)
         }
         .windowResizability(.contentSize)
-        .defaultSize(CGSize(width: defaultWidth, height: 600))
+        .defaultSize(CGSize(width: defaultWidth, height: defaultHeight))
         // .defaultPosition(.bottomTrailing)  // 'defaultPosition' is unavailable in visionOS
         
         WindowGroup(id: "volumeView") {
