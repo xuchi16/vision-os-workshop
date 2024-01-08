@@ -5,10 +5,7 @@
 //  Created by xuchi on 2024/1/8.
 //
 
-import Foundation
 import RealityKit
-import RealityKitContent
-import os
 
 public struct MoveSystem: System {
     static let moveQuery = EntityQuery(where: .has(MoveComponent.self))

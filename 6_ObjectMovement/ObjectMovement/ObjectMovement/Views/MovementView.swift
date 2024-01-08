@@ -15,23 +15,22 @@ struct MovementView: View {
     private let attachmentFontSize = 50.0
     private let attachmentPadding = 40.0
     
-    @State var dragEntity = Entity()
     @State var programmaticEntity = Entity()
+    @State var dragEntity = Entity()
     @Environment(ViewModel.self) var model;
-
+    
     var dragGesture: some Gesture {
         DragGesture()
             .targetedToAnyEntity()
             .onChanged{ value in
-                dragEntity.position = value.convert(value.location3D, from: .local, to: dragEntity.parent!)
+                dragEntity.position =
+                value.convert(value.location3D, from: .local, to: dragEntity.parent!)
             }
     }
+    
     var body: some View {
         RealityView { content, attachments in
             // Programmatic movement
-            MoveComponent.registerComponent()
-            MoveSystem.registerSystem()
-            
             let initPosition = SIMD3<Float>(x: -0.6, y: 1.5, z: -2)
             var moveComponent = MoveComponent(position: initPosition)
             moveComponent.movementEnabled = {model.enableMovement}

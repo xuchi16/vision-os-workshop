@@ -12,6 +12,11 @@ struct ObjectMovementApp: App {
     
     @State var model = ViewModel()
     
+    init() {
+        MoveComponent.registerComponent()
+        MoveSystem.registerSystem()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
