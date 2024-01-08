@@ -31,7 +31,6 @@ class MockWeatherService: WeatherService {
 
 class RealWeatherService: WeatherService {
     func getRealtimeWeather(completion: @escaping (RealtimeWeather?, String?) -> Void) {
-        // 实际的网络请求和数据处理逻辑
         // ...
     }
     

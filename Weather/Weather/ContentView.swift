@@ -6,105 +6,28 @@
 //
 
 import SwiftUI
-import RealityKit
-import RealityKitContent
+
 
 struct ContentView: View {
-    
-    @State private var showImmersiveSpace = false
-    @State private var immersiveSpaceIsShown = false
-    
-    @Environment(\.openImmersiveSpace) var openImmersiveSpace
-    @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
-    
     @StateObject var weatherClient = WeatherClient()
     
+    @State private var isVolumeOn = false
+    @Environment(\.openWindow) private var openWindow
+    @Environment(\.dismissWindow) private var dismissWindow
+
     var body: some View {
         VStack {
-            HStack {
-                VStack {
-                    Model3D(named: "Scene", bundle: realityKitContentBundle)
-                        .padding(.bottom, 20)
-
-                    Text("Shanghai")
-                    Text("10°C")
-                        .font(.title)
-                    Text("Sunny")
-                        .font(.subheadline)
-                    
+            WeatherCardView()
+            Toggle("Detail", isOn: $isVolumeOn)
+                .toggleStyle(.button)
+                .onChange(of: isVolumeOn) {_, newValue in
+                    if newValue {
+                        openWindow(id: "detailView")
+                    } else {
+                        dismissWindow(id: "detailView")
+                    }
                 }
-                .padding(20)
-                .background(.thickMaterial)
-                .shadow(radius: 5)
-                .cornerRadius(20)
-                
-                VStack {
-                    Model3D(named: "Scene", bundle: realityKitContentBundle)
-                        .padding(.bottom, 20)
-
-                    Text("Shanghai")
-                    Text("10°C")
-                        .font(.title)
-                    Text("Sunny")
-                        .font(.subheadline)
-                    
-                }
-                .padding(20)
-                .background(.thickMaterial)
-                .shadow(radius: 5)
-                .cornerRadius(20)
-            }
-
-            
-            HStack {
-                VStack {
-                    Model3D(named: "Scene", bundle: realityKitContentBundle)
-                        .padding(.bottom, 20)
-
-                    Text("Shanghai")
-                    Text("10°C")
-                        .font(.title)
-                    Text("Sunny")
-                        .font(.subheadline)
-                    
-                }
-                .padding(20)
-                .background(.thickMaterial)
-                .shadow(radius: 5)
-                .cornerRadius(20)
-                
-                VStack {
-                    Model3D(named: "Scene", bundle: realityKitContentBundle)
-                        .padding(.bottom, 20)
-
-                    Text("Shanghai")
-                    Text("10°C")
-                        .font(.title)
-                    Text("Sunny")
-                        .font(.subheadline)
-                    
-                }
-                .padding(20)
-                .background(.thickMaterial)
-                .shadow(radius: 5)
-                .cornerRadius(20)
-            }
-
-                        if let weather = weatherClient.realtimeWeather {
-                            Text("Shanghai")
-                            Text("\(weather.current.tempC)°C")
-                                .font(.title)
-                            Text(weather.current.condition.text)
-                                .font(.subheadline)
-                        } else {
-                            Text("Loading weather...")
-                        }
-            
         }
-
-        //        .onAppear {
-        //            weatherClient.getRealtimeWeather()
-        //        }
         
     }
 }
