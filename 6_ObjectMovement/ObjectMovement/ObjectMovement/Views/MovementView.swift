@@ -17,7 +17,7 @@ struct MovementView: View {
     
     @State var programmaticEntity = Entity()
     @State var dragEntity = Entity()
-    @Environment(ViewModel.self) var model;
+    @Environment(ViewModel.self) var model
     
     var dragGesture: some Gesture {
         DragGesture()
