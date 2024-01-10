@@ -3,6 +3,7 @@
 //  FaceMe
 //
 //  Created by xuchi on 2024/1/10.
+//  Reference to: https://github.com/satoshi0212/visionOS_30Days/blob/main/Day16/Day16/ARKitSessionManager.swift
 //
 
 import SwiftUI

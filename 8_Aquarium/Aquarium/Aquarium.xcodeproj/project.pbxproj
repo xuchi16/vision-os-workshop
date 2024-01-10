@@ -7,91 +7,79 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C2AE7C502B4EC3C10040D470 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = C2AE7C4F2B4EC3C10040D470 /* RealityKitContent */; };
-		C2AE7C522B4EC3C10040D470 /* FaceMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE7C512B4EC3C10040D470 /* FaceMeApp.swift */; };
-		C2AE7C542B4EC3C10040D470 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE7C532B4EC3C10040D470 /* ContentView.swift */; };
-		C2AE7C562B4EC3C10040D470 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE7C552B4EC3C10040D470 /* ImmersiveView.swift */; };
-		C2AE7C582B4EC3C20040D470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2AE7C572B4EC3C20040D470 /* Assets.xcassets */; };
-		C2AE7C5B2B4EC3C20040D470 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2AE7C5A2B4EC3C20040D470 /* Preview Assets.xcassets */; };
-		C2AE7C632B4EC3F90040D470 /* FaceComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE7C622B4EC3F90040D470 /* FaceComponent.swift */; };
-		C2AE7C652B4EC4010040D470 /* FaceSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE7C642B4EC4010040D470 /* FaceSystem.swift */; };
-		C2AE7C672B4EC4850040D470 /* ARKitSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE7C662B4EC4850040D470 /* ARKitSessionManager.swift */; };
-		C2AE7C692B4EC54A0040D470 /* tv_retro.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C2AE7C682B4EC5490040D470 /* tv_retro.usdz */; };
+		C2AE7C792B4F03750040D470 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = C2AE7C782B4F03750040D470 /* RealityKitContent */; };
+		C2AE7C7B2B4F03750040D470 /* AquariumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE7C7A2B4F03750040D470 /* AquariumApp.swift */; };
+		C2AE7C7D2B4F03750040D470 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE7C7C2B4F03750040D470 /* ContentView.swift */; };
+		C2AE7C7F2B4F03750040D470 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AE7C7E2B4F03750040D470 /* ImmersiveView.swift */; };
+		C2AE7C812B4F03760040D470 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2AE7C802B4F03760040D470 /* Assets.xcassets */; };
+		C2AE7C842B4F03760040D470 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2AE7C832B4F03760040D470 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C2AE7C4A2B4EC3C10040D470 /* FaceMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2AE7C4E2B4EC3C10040D470 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
-		C2AE7C512B4EC3C10040D470 /* FaceMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceMeApp.swift; sourceTree = "<group>"; };
-		C2AE7C532B4EC3C10040D470 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		C2AE7C552B4EC3C10040D470 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
-		C2AE7C572B4EC3C20040D470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C2AE7C5A2B4EC3C20040D470 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C2AE7C5C2B4EC3C20040D470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2AE7C622B4EC3F90040D470 /* FaceComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceComponent.swift; sourceTree = "<group>"; };
-		C2AE7C642B4EC4010040D470 /* FaceSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceSystem.swift; sourceTree = "<group>"; };
-		C2AE7C662B4EC4850040D470 /* ARKitSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitSessionManager.swift; sourceTree = "<group>"; };
-		C2AE7C682B4EC5490040D470 /* tv_retro.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = tv_retro.usdz; sourceTree = "<group>"; };
+		C2AE7C732B4F03750040D470 /* Aquarium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aquarium.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2AE7C772B4F03750040D470 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		C2AE7C7A2B4F03750040D470 /* AquariumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AquariumApp.swift; sourceTree = "<group>"; };
+		C2AE7C7C2B4F03750040D470 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C2AE7C7E2B4F03750040D470 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
+		C2AE7C802B4F03760040D470 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2AE7C832B4F03760040D470 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C2AE7C852B4F03760040D470 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C2AE7C472B4EC3C10040D470 /* Frameworks */ = {
+		C2AE7C702B4F03750040D470 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2AE7C502B4EC3C10040D470 /* RealityKitContent in Frameworks */,
+				C2AE7C792B4F03750040D470 /* RealityKitContent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C2AE7C412B4EC3C10040D470 = {
+		C2AE7C6A2B4F03750040D470 = {
 			isa = PBXGroup;
 			children = (
-				C2AE7C4C2B4EC3C10040D470 /* FaceMe */,
-				C2AE7C4D2B4EC3C10040D470 /* Packages */,
-				C2AE7C4B2B4EC3C10040D470 /* Products */,
+				C2AE7C752B4F03750040D470 /* Aquarium */,
+				C2AE7C762B4F03750040D470 /* Packages */,
+				C2AE7C742B4F03750040D470 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C2AE7C4B2B4EC3C10040D470 /* Products */ = {
+		C2AE7C742B4F03750040D470 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C2AE7C4A2B4EC3C10040D470 /* FaceMe.app */,
+				C2AE7C732B4F03750040D470 /* Aquarium.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C2AE7C4C2B4EC3C10040D470 /* FaceMe */ = {
+		C2AE7C752B4F03750040D470 /* Aquarium */ = {
 			isa = PBXGroup;
 			children = (
-				C2AE7C512B4EC3C10040D470 /* FaceMeApp.swift */,
-				C2AE7C532B4EC3C10040D470 /* ContentView.swift */,
-				C2AE7C622B4EC3F90040D470 /* FaceComponent.swift */,
-				C2AE7C642B4EC4010040D470 /* FaceSystem.swift */,
-				C2AE7C552B4EC3C10040D470 /* ImmersiveView.swift */,
-				C2AE7C662B4EC4850040D470 /* ARKitSessionManager.swift */,
-				C2AE7C572B4EC3C20040D470 /* Assets.xcassets */,
-				C2AE7C5C2B4EC3C20040D470 /* Info.plist */,
-				C2AE7C592B4EC3C20040D470 /* Preview Content */,
+				C2AE7C7A2B4F03750040D470 /* AquariumApp.swift */,
+				C2AE7C7C2B4F03750040D470 /* ContentView.swift */,
+				C2AE7C7E2B4F03750040D470 /* ImmersiveView.swift */,
+				C2AE7C802B4F03760040D470 /* Assets.xcassets */,
+				C2AE7C852B4F03760040D470 /* Info.plist */,
+				C2AE7C822B4F03760040D470 /* Preview Content */,
 			);
-			path = FaceMe;
+			path = Aquarium;
 			sourceTree = "<group>";
 		};
-		C2AE7C4D2B4EC3C10040D470 /* Packages */ = {
+		C2AE7C762B4F03750040D470 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				C2AE7C682B4EC5490040D470 /* tv_retro.usdz */,
-				C2AE7C4E2B4EC3C10040D470 /* RealityKitContent */,
+				C2AE7C772B4F03750040D470 /* RealityKitContent */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
 		};
-		C2AE7C592B4EC3C20040D470 /* Preview Content */ = {
+		C2AE7C822B4F03760040D470 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				C2AE7C5A2B4EC3C20040D470 /* Preview Assets.xcassets */,
+				C2AE7C832B4F03760040D470 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -99,42 +87,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C2AE7C492B4EC3C10040D470 /* FaceMe */ = {
+		C2AE7C722B4F03750040D470 /* Aquarium */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C2AE7C5F2B4EC3C20040D470 /* Build configuration list for PBXNativeTarget "FaceMe" */;
+			buildConfigurationList = C2AE7C882B4F03760040D470 /* Build configuration list for PBXNativeTarget "Aquarium" */;
 			buildPhases = (
-				C2AE7C462B4EC3C10040D470 /* Sources */,
-				C2AE7C472B4EC3C10040D470 /* Frameworks */,
-				C2AE7C482B4EC3C10040D470 /* Resources */,
+				C2AE7C6F2B4F03750040D470 /* Sources */,
+				C2AE7C702B4F03750040D470 /* Frameworks */,
+				C2AE7C712B4F03750040D470 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = FaceMe;
+			name = Aquarium;
 			packageProductDependencies = (
-				C2AE7C4F2B4EC3C10040D470 /* RealityKitContent */,
+				C2AE7C782B4F03750040D470 /* RealityKitContent */,
 			);
-			productName = FaceMe;
-			productReference = C2AE7C4A2B4EC3C10040D470 /* FaceMe.app */;
+			productName = Aquarium;
+			productReference = C2AE7C732B4F03750040D470 /* Aquarium.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C2AE7C422B4EC3C10040D470 /* Project object */ = {
+		C2AE7C6B2B4F03750040D470 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
-					C2AE7C492B4EC3C10040D470 = {
+					C2AE7C722B4F03750040D470 = {
 						CreatedOnToolsVersion = 15.2;
 					};
 				};
 			};
-			buildConfigurationList = C2AE7C452B4EC3C10040D470 /* Build configuration list for PBXProject "FaceMe" */;
+			buildConfigurationList = C2AE7C6E2B4F03750040D470 /* Build configuration list for PBXProject "Aquarium" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -142,47 +130,43 @@
 				en,
 				Base,
 			);
-			mainGroup = C2AE7C412B4EC3C10040D470;
-			productRefGroup = C2AE7C4B2B4EC3C10040D470 /* Products */;
+			mainGroup = C2AE7C6A2B4F03750040D470;
+			productRefGroup = C2AE7C742B4F03750040D470 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C2AE7C492B4EC3C10040D470 /* FaceMe */,
+				C2AE7C722B4F03750040D470 /* Aquarium */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C2AE7C482B4EC3C10040D470 /* Resources */ = {
+		C2AE7C712B4F03750040D470 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2AE7C692B4EC54A0040D470 /* tv_retro.usdz in Resources */,
-				C2AE7C5B2B4EC3C20040D470 /* Preview Assets.xcassets in Resources */,
-				C2AE7C582B4EC3C20040D470 /* Assets.xcassets in Resources */,
+				C2AE7C842B4F03760040D470 /* Preview Assets.xcassets in Resources */,
+				C2AE7C812B4F03760040D470 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C2AE7C462B4EC3C10040D470 /* Sources */ = {
+		C2AE7C6F2B4F03750040D470 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2AE7C632B4EC3F90040D470 /* FaceComponent.swift in Sources */,
-				C2AE7C542B4EC3C10040D470 /* ContentView.swift in Sources */,
-				C2AE7C652B4EC4010040D470 /* FaceSystem.swift in Sources */,
-				C2AE7C522B4EC3C10040D470 /* FaceMeApp.swift in Sources */,
-				C2AE7C672B4EC4850040D470 /* ARKitSessionManager.swift in Sources */,
-				C2AE7C562B4EC3C10040D470 /* ImmersiveView.swift in Sources */,
+				C2AE7C7D2B4F03750040D470 /* ContentView.swift in Sources */,
+				C2AE7C7B2B4F03750040D470 /* AquariumApp.swift in Sources */,
+				C2AE7C7F2B4F03750040D470 /* ImmersiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		C2AE7C5D2B4EC3C20040D470 /* Debug */ = {
+		C2AE7C862B4F03760040D470 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -245,7 +229,7 @@
 			};
 			name = Debug;
 		};
-		C2AE7C5E2B4EC3C20040D470 /* Release */ = {
+		C2AE7C872B4F03760040D470 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -301,14 +285,14 @@
 			};
 			name = Release;
 		};
-		C2AE7C602B4EC3C20040D470 /* Debug */ = {
+		C2AE7C892B4F03760040D470 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"FaceMe/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Aquarium/Preview Content\"";
 				DEVELOPMENT_TEAM = 5KVRUJ2FNN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -318,7 +302,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = pro.xuchi.FaceMe;
+				PRODUCT_BUNDLE_IDENTIFIER = pro.xuchi.Aquarium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -327,14 +311,14 @@
 			};
 			name = Debug;
 		};
-		C2AE7C612B4EC3C20040D470 /* Release */ = {
+		C2AE7C8A2B4F03760040D470 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"FaceMe/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Aquarium/Preview Content\"";
 				DEVELOPMENT_TEAM = 5KVRUJ2FNN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -344,7 +328,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = pro.xuchi.FaceMe;
+				PRODUCT_BUNDLE_IDENTIFIER = pro.xuchi.Aquarium;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -356,20 +340,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C2AE7C452B4EC3C10040D470 /* Build configuration list for PBXProject "FaceMe" */ = {
+		C2AE7C6E2B4F03750040D470 /* Build configuration list for PBXProject "Aquarium" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C2AE7C5D2B4EC3C20040D470 /* Debug */,
-				C2AE7C5E2B4EC3C20040D470 /* Release */,
+				C2AE7C862B4F03760040D470 /* Debug */,
+				C2AE7C872B4F03760040D470 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C2AE7C5F2B4EC3C20040D470 /* Build configuration list for PBXNativeTarget "FaceMe" */ = {
+		C2AE7C882B4F03760040D470 /* Build configuration list for PBXNativeTarget "Aquarium" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C2AE7C602B4EC3C20040D470 /* Debug */,
-				C2AE7C612B4EC3C20040D470 /* Release */,
+				C2AE7C892B4F03760040D470 /* Debug */,
+				C2AE7C8A2B4F03760040D470 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -377,11 +361,11 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C2AE7C4F2B4EC3C10040D470 /* RealityKitContent */ = {
+		C2AE7C782B4F03750040D470 /* RealityKitContent */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RealityKitContent;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = C2AE7C422B4EC3C10040D470 /* Project object */;
+	rootObject = C2AE7C6B2B4F03750040D470 /* Project object */;
 }
