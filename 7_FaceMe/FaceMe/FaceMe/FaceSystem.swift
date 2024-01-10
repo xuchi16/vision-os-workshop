@@ -18,7 +18,7 @@ public struct FaceSystem: System {
         let entities = context.scene.performQuery(Self.faceQuery)
         
         for entity in entities {
-            guard var followEntity = entity.components[FaceComponent.self] else {
+            guard let followEntity = entity.components[FaceComponent.self] else {
                 continue
             }
             
