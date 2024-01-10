@@ -11,3 +11,4 @@ A workshop for vision os development.
 | 4 | [Ornaments](4_Ornaments) | ![s2](/4_Ornaments/4_Ornaments.png) | [X](https://twitter.com/xchester16/status/1741734126645084559) / [zh](https://xz3t11cmy1.feishu.cn/wiki/AX30wDyG9iamgskAUqYcM7GEnld) |
 | 5 | [Video playback](5_VideoPlayback) | ![s2](/5_VideoPlayback/5_VideoPlayback.png) | [X](https://twitter.com/xchester16/status/1742536344935731383) / [zh](https://xz3t11cmy1.feishu.cn/wiki/LNv1wZX7figPuokSYSUcLGHqnXb) |
 | 6 | [Object Movement](6_ObjectMovement) | ![s2](/6_ObjectMovement/6_ObjectMovement.png) | [X](https://twitter.com/xchester16/status/1744366989735325936) / [zh](https://xz3t11cmy1.feishu.cn/wiki/CZn8wwb3KixV7yktxKCc0tRon6X) |
+| 6 | [Face Me](7_FaceMe) | ![s2](/7_FaceMe/7_FaceMe.png) | [X](https://twitter.com/xchester16/status/1745098055618314432) / [zh]https://xz3t11cmy1.feishu.cn/wiki/S5vjwUDWYivnN1kd9hWcHFURn6f) |

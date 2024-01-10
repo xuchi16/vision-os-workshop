@@ -22,7 +22,7 @@ struct ImmersiveView: View {
 
             let followComponent = FaceComponent(manager: arkitSessionManager)
             entity.components[FaceComponent.self] = followComponent
-            entity.position = SIMD3<Float>(x: 0, y: 1, z: 0)
+            entity.position = SIMD3<Float>(x: 0, y: 1.2, z: 0)
             content.add(entity)
         }
         .task {
