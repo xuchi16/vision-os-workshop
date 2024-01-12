@@ -58,14 +58,14 @@ def Xform "Root"
         def Shader "Image"
         {
             uniform token info:id = "ND_image_color3"
-            asset inputs:file = @musle.jpg@
+            asset inputs:file = @hulk_2.png@
             string inputs:filtertype
             string inputs:vaddressmode
             color3f outputs:out
             float2 ui:nodegraph:node:pos = (-200.83203, -96.93359)
             float2 ui:nodegraph:node:size = (148.5, 199)
-            int ui:nodegraph:node:stackingOrder = 82
-            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default"]
+            int ui:nodegraph:node:stackingOrder = 136
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "outputs:out", "inputs:texcoord"]
         }
 
         def Shader "Position"
@@ -105,13 +105,13 @@ def Xform "Root"
         def Shader "Image_1"
         {
             uniform token info:id = "ND_image_color3"
-            asset inputs:file = @skeleton.jpg@
+            asset inputs:file = @shrek_2.png@
             string inputs:filtertype
             string inputs:vaddressmode
             color3f outputs:out
             float2 ui:nodegraph:node:pos = (-197.85547, 109.884766)
             float2 ui:nodegraph:node:size = (148.5, 199)
-            int ui:nodegraph:node:stackingOrder = 84
+            int ui:nodegraph:node:stackingOrder = 137
             string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file"]
         }
 
@@ -150,6 +150,8 @@ def Xform "Root"
             token outputs:mtlx:surface
             token outputs:realitykit:vertex
             token outputs:surface.connect = </Root/Box1/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (0, 109.5)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
 
             def Shader "DefaultSurfaceShader"
             {
