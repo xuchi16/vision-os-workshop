@@ -1,0 +1,194 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["GridMaterial", "PBR_RED", "SmoothConcrete", "BlackSiliconeRubber", "ScratchedMetallicPaint", "Glass", "Group", "ImageMaterial", "Box1", "Box2", "Board"]
+    def "GridMaterial" (
+        active = true
+        references = @Materials/GridMaterial.usda@
+    )
+    {
+        float3 xformOp:scale = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def Material "ImageMaterial"
+    {
+        float inputs:ScrollPercentage = 40 (
+            customData = {
+                dictionary realitykit = {
+                    float2 positionInSubgraph = (-670.22266, -349.14258)
+                    float2 sizeInSubgraph = (174.5, 53)
+                    int stackingOrderInSubgraph = 134
+                }
+            }
+        )
+        prepend token outputs:mtlx:surface.connect = </Root/ImageMaterial/PreviewSurface.outputs:out>
+        token outputs:realitykit:vertex
+        float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (597.0586, -59.351562)
+        float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+        int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 70
+
+        def Shader "PreviewSurface"
+        {
+            uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+            float inputs:clearcoat
+            float inputs:clearcoatRoughness.connect = None
+            color3f inputs:diffuseColor
+            color3f inputs:emissiveColor.connect = </Root/ImageMaterial/IfGreaterOrEqual.outputs:out>
+            float inputs:ior
+            float inputs:metallic
+            float3 inputs:normal
+            float inputs:occlusion
+            float inputs:opacity
+            float inputs:opacityThreshold
+            float inputs:roughness
+            token outputs:out
+            float2 ui:nodegraph:node:pos = (335.5703, -33.625)
+            float2 ui:nodegraph:node:size = (159.5, 307)
+            int ui:nodegraph:node:stackingOrder = 72
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["Advanced", "inputs:emissiveColor"]
+        }
+
+        def Shader "Image"
+        {
+            uniform token info:id = "ND_image_color3"
+            asset inputs:file = @musle.jpg@
+            string inputs:filtertype
+            string inputs:vaddressmode
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-200.83203, -96.93359)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 82
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default"]
+        }
+
+        def Shader "Position"
+        {
+            uniform token info:id = "ND_position_vector3"
+            float3 outputs:out
+            float2 ui:nodegraph:node:pos = (-280.47656, -379.18945)
+            float2 ui:nodegraph:node:size = (133.5, 40)
+            int ui:nodegraph:node:stackingOrder = 133
+        }
+
+        def Shader "Separate3"
+        {
+            uniform token info:id = "ND_separate3_vector3"
+            float3 inputs:in.connect = </Root/ImageMaterial/Position.outputs:out>
+            float outputs:outx
+            float outputs:outy
+            float outputs:outz
+            float2 ui:nodegraph:node:pos = (-102.99609, -373.9961)
+            float2 ui:nodegraph:node:size = (115.5, 145)
+            int ui:nodegraph:node:stackingOrder = 131
+        }
+
+        def Shader "IfGreaterOrEqual"
+        {
+            uniform token info:id = "ND_ifgreatereq_color3"
+            color3f inputs:in1.connect = </Root/ImageMaterial/Image.outputs:out>
+            color3f inputs:in2.connect = </Root/ImageMaterial/Image_1.outputs:out>
+            float inputs:value1.connect = </Root/ImageMaterial/Separate3.outputs:outy>
+            float inputs:value2.connect = </Root/ImageMaterial/Range.outputs:out>
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (96.55859, -221.87695)
+            float2 ui:nodegraph:node:size = (157, 163)
+            int ui:nodegraph:node:stackingOrder = 53
+        }
+
+        def Shader "Image_1"
+        {
+            uniform token info:id = "ND_image_color3"
+            asset inputs:file = @skeleton.jpg@
+            string inputs:filtertype
+            string inputs:vaddressmode
+            color3f outputs:out
+            float2 ui:nodegraph:node:pos = (-197.85547, 109.884766)
+            float2 ui:nodegraph:node:size = (148.5, 199)
+            int ui:nodegraph:node:stackingOrder = 84
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file"]
+        }
+
+        def Shader "Range"
+        {
+            uniform token info:id = "ND_range_float"
+            bool inputs:doclamp
+            float inputs:in.connect = </Root/ImageMaterial.inputs:ScrollPercentage>
+            float inputs:inhigh = 100
+            float inputs:outhigh = 0.1
+            float inputs:outlow = -0.1
+            float outputs:out
+            float2 ui:nodegraph:node:pos = (-428.2578, -309.96094)
+            float2 ui:nodegraph:node:size = (98, 217)
+            int ui:nodegraph:node:stackingOrder = 88
+            string[] ui:nodegraph:realitykit:node:attributesShowingChildren = []
+        }
+    }
+
+    def Cube "Box1" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Root/ImageMaterial> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (2, 5, 2)
+        float3 xformOp:translate = (-0.5, 1.5, -1.5)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "DefaultMaterial"
+        {
+            token outputs:mtlx:surface
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = </Root/Box1/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+            def Shader "DefaultSurfaceShader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (1, 1, 1)
+                float inputs:roughness = 0.75
+                token outputs:surface
+            }
+        }
+    }
+
+    def Cube "Box2" (
+        active = true
+        prepend apiSchemas = ["MaterialBindingAPI"]
+    )
+    {
+        rel material:binding = </Root/ImageMaterial> (
+            bindMaterialAs = "weakerThanDescendants"
+        )
+        double size = 0.2
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (2, 5, 2)
+        float3 xformOp:translate = (0.5, 1.5, -1.5)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "DefaultMaterial"
+        {
+            token outputs:mtlx:surface
+            token outputs:realitykit:vertex
+            token outputs:surface.connect = </Root/Box2/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+            def Shader "DefaultSurfaceShader"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (1, 1, 1)
+                float inputs:roughness = 0.75
+                token outputs:surface
+            }
+        }
+    }
+}
+
