@@ -12,4 +12,4 @@ A workshop for vision os development.
 | 5 | [Video Playback](5_VideoPlayback) | ![s2](/5_VideoPlayback/5_VideoPlayback.png) | [X](https://twitter.com/xchester16/status/1742536344935731383) / [zh](https://xz3t11cmy1.feishu.cn/wiki/LNv1wZX7figPuokSYSUcLGHqnXb) |
 | 6 | [Object Movement](6_ObjectMovement) | ![s2](/6_ObjectMovement/6_ObjectMovement.png) | [X](https://twitter.com/xchester16/status/1744366989735325936) / [zh](https://xz3t11cmy1.feishu.cn/wiki/CZn8wwb3KixV7yktxKCc0tRon6X) |
 | 7 | [Face Me](7_FaceMe) | ![s2](/7_FaceMe/7_FaceMe.png) | [X](https://twitter.com/xchester16/status/1745098055618314432) / [zh](https://xz3t11cmy1.feishu.cn/wiki/S5vjwUDWYivnN1kd9hWcHFURn6f) |
-| 8 | [Surface Shaders](8_SurfaceShaders) | ![s2](/8_SurfaceShaders/8_SurfaceShaders.png) | [X](https://twitter.com/xchester16/status/1745866956107120915) / [zh](https://xz3t11cmy1.feishu.cn/wiki/RFMhw76FeiriH4kRX0BcCL3GnAe) |
+| 8 | [Surface Shaders](8_SurfaceShaders) | ![s2](/8_SurfaceShaders/8_SurfaceShaders.png) | [X](https://twitter.com/xchester16/status/1745873603802136946) / [zh](https://xz3t11cmy1.feishu.cn/wiki/RFMhw76FeiriH4kRX0BcCL3GnAe) |
