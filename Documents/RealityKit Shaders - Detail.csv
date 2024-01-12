@@ -1,0 +1,187 @@
+﻿No,Name,Type,Description
+1,Cellular Noise 2D,2D PROCEDURAL,A 2D cellular noise generator.
+2,Noise 2D,2D PROCEDURAL,A 2D Perlin noise generator.
+3,Ramp 4 Corners,2D PROCEDURAL,A four-point linear value ramp (gradient) generator.
+4,Ramp Horizontal,2D PROCEDURAL,A left-to-right linear value ramp (gradient) generator.
+5,Ramp Vertical,2D PROCEDURAL,A top-to-bottom linear value ramp (gradient) generator.
+6,Split Horizontal,2D PROCEDURAL,"A left-to-right split matte, split at a specified U value."
+7,Split Vertical,2D PROCEDURAL,"A top-to-bottom split matte, split at a specified V value."
+8,Worley Noise 2D,2D PROCEDURAL,A 2D Worley noise generator.
+9,Image,2D TEXTURE,A texture referencing a 2D image file.
+10,Tiled Image,2D TEXTURE,Samples data from an image with provisions for offsetting and tiling in UV space.
+11,Transform 2D,2D TEXTURE,A node that applies an affine transformation to a 2D input.
+12,UV Texture,2D TEXTURE,A MaterialX version of UsD UV Texture reader.
+13,Cellular Noise 3D,3D PROCEDURAL,A 3D cellular noise generator.
+14,Fractal Noise 3D,3D PROCEDURAL,Zero-centered 3D fractal noise created by summing several octaves of 3D Perlin noise.
+15,Noise 3D,3D PROCEDURAL,A 3D Perlin noise generator.
+16,Worley Noise 3D,3D PROCEDURAL,A 3D Worley noise generator.
+17,Triplanar Projection,3D TEXTURE,Samples data from three images and projects each along its respective coordinate axis and blends them by geometric normal.
+18,Contrast,ADJUSTMENT,Increases or decreases contrast of values using a linear slope multiplier.
+19,HSV Adjust,ADJUSTMENT,"Adjusts the hue, saturation and value of an RGB color by a vector<amount>."
+20,HSV to RGB,ADJUSTMENT,Converts a color from HSV to RGB space.
+21,Luminance,ADJUSTMENT,Outputs a grayscale value containing the luminance of the incoming RGB color in all color channels.
+22,Range,ADJUSTMENT,Remaps incoming values from one range to another.
+23,Remap,ADJUSTMENT,Linearly remaps incoming values from one range to another.
+24,RGB to HSV,ADJUSTMENT,Converts a color from RGB to HSV space.
+25,Saturate,ADJUSTMENT,Adjusts the saturation of a color.
+26,Smooth Step,ADJUSTMENT,Outputs a smooth remapping from low-high to O-1.
+27,Step (RealityKit),ADJUSTMENT,Step
+28,Time (float),APPLICATION,The current time in seconds.
+29,Up Direction,APPLICATION,The direction of the upvector
+30,Additive Mix,COMPOSITING,Adds foreground and background values.
+31,Burn,COMPOSITING,A blend operation that darkens the foreground layer using the background.
+32,Difference,COMPOSITING,Outputs the distance between foreground and background values.
+33,Disjoint Over,COMPOSITING,"A merge operation that layers foreground over background color, but assumes no overlap in partially transparent areas covered by both."
+34,Dodge,COMPOSITING,A blend operation that lightens the background layer depending on the foreground.
+35,In,COMPOSITING,Outputs areas of foreground that overlap with the alpha of background.
+36,Inside,COMPOSITING,Multiplies a mask to all channels of the input.
+37,Mask,COMPOSITING,Outputs areas of background that overlap with the alpha of foreground.
+38,Matte,COMPOSITING,A merge operation that layers premultiplied foreground over background.
+39,Mix,COMPOSITING,"Mixes foreground and background inputs, weighting based on mix value."
+40,Out,COMPOSITING,Outputs areas of foreground that do not overlap with background.
+41,Outside,COMPOSITING,Multiplies (1 - mask) to all channels of the input.
+42,Over,COMPOSITING,A merge operation that layers foreground over background using the alpha of the foreground.
+43,Overlay,COMPOSITING,A blend operation that multiplies dark areas and screens light areas.
+44,Premultiply,COMPOSITING,Multiplies the RGB channels of the input by the alpha channel.
+45,Screen,COMPOSITING,A blend operation that lightens areas that are darker than white.
+46,Subtractive Mix,COMPOSITING,Subtracts foreground from background values.
+47,Unpremultiply,COMPOSITING,Divides the RGB channels of the input by the alpha channel.
+48,Combine 2,DATA,Combines the channels from two streams into two channels of a single output stream of a compatible type.
+49,Combine 3,DATA,Combines the channels from three streams into three channels of a single output stream of a compatible type.
+50,Combine 4,DATA,Combines the channels from four streams into four channels of a single output stream of a compatible type.
+51,Convert,DATA,Converts a stream from one data type to another.
+52,Extract,DATA,Generates a float stream from one channel of a colorN or vectorN stream.
+53,Primvar Reader (bool),DATA,A node that provides the ability for shading networks to consume boolean data defined on geometry.
+54,Primvar Reader (float),DATA,A node that provides the ability for shading networks to consume float data defined on geometry.
+55,Primvar Reader (integer),DATA,A node that provides the ability for shading networks to consume integer data defined on geometry.
+56,Primvar Reader (vector2f),DATA,A node that provides the ability for shading networks to consume float2 data defined on geometry.
+57,Primvar Reader (vector3f),DATA,A node that provides the ability for shading networks to consume float3 data defined on geometry.
+58,Primvar Reader (vector4f),DATA,A node that provides the ability for shading networks to consume float4 data defined on geometry.
+59,Separate 2,DATA,Outputs each of the channels of a vector2 as a separate float output.
+60,Separate 3,DATA,Outputs each of the channels of a color3 or vector3 as a separate float output.
+61,Separate 4,DATA,Outputs each of the channels of a color4 or vector4 as a separate float output.
+62,separate2.genericNodeGroup,DATA,separate2.menuDescriptionShort
+63,Swizzle,DATA,"Performs an arbitrary permutation of the channels of the input stream, returning a new stream of the specified type."
+64,Bitangent,GEOMETRIC,The geometric bitangent vector of the currently-processed data in a given coordinate space.
+65,Geometric Property,GEOMETRIC,The value of the specified geometric property (defined using <geompropdef>) of the currently-bound geometry.
+66,Geometry Color,GEOMETRIC,"The color associated with the geometry at the currently-processed geometric position, typically defined by vertex color."
+67,Normal,GEOMETRIC,The geometric normal of the currently-processed data in a given coordinate space.
+68,Position,GEOMETRIC,The coordinates of the currently-processed data in a given coordinate space.
+69,Reflect (RealityKit),GEOMETRIC,Reflects a vector about another vector.
+70,Refract (RealityKit),GEOMETRIC,Refracts a vector using a given normal and index of refraction (eta).
+71,Tangent,GEOMETRIC,The geometric tangent of the currently-processed data in a given coordinate space.
+72,Texture Coordinates,GEOMETRIC,The 2D or 3D texture coordinates of the currently-processed data.
+73,And (RealityKit),LOGIC,Boolean operation in1 ll in2.
+74,If Equal,LOGIC,Outputs True Result or False Result depending on whether value1==value2.
+75,If Greater,LOGIC,Outputs True Result or False Result depending on whether value1 > value2.
+76,If Greater Or Equal,LOGIC,Outputs True Result or False Result depending on whether value1 >= value2.
+77,Not (RealityKit),LOGIC,Returns !input.
+78,Or (RealityKit),LOGIC,Boolean operation in1 ll in2.
+79,Switch,LOGIC,"Outputs the value from one of ten input streams, according to a selector<which>."
+80,XOR (RealityKit),LOGIC,Returns true if only one of the inputs is true.
+81,NodeGraph,MATERIAL,A node that can contain shading nodes and other node graphs.
+82,Abs,MATH,Outputs the per-channel absolute value of the input.
+83,Acos,MATH,The arccosine of the incoming value in radians.
+84,Add,MATH,Adds two values.
+85,Asin,MATH,The arcsine of the incoming value in radians.
+86,Atan2,MATH,The arctangent of the expression (iny/inx) in radians.
+87,Ceiling,MATH,"Outputs the nearest integer value, per-channel, greater than or equal to the incoming values."
+88,Clamp,MATH,Clamps the input per-channel to a specified range.
+89,Cos,MATH,The cosine of the incoming value in radians.
+90,Cross Product,MATH,Calculates the cross product vector of 2 input vectors.
+91,Determinant,MATH,Outputs the float determinant of a matrix.
+92,Divide,MATH,Divides two values. Division of two matrices is the product of <in1> and the inverse of <in2>.
+93,Dot Product,MATH,Outputs the dot product of two vectors.
+94,Exp,MATH,'e' to the power of the input.
+95,Floor,MATH,"Outputs the integer value per-channel, equal to the incoming values."
+96,Fractional (RealityKit),MATH,Returns the fractional part of a floating point number.
+97,Invert Matrix,MATH,Outputs the inverse of a matrix.
+98,Magnitude,MATH,Outputs the float magnitude of a vector.
+99,Max,MATH,Outputs the maximum of two incoming values.
+100,Min,MATH,Outputs the minimum of two incoming values.
+101,Modulo,MATH,Outputs the remaining fraction after dividing the input by a value and subtracting the integer portion.
+102,Multiply,MATH,Multiplies two values.
+103,Natural Log,MATH,The natural log of the input.
+104,Normal Map,MATH,Transforms a normal vector from object or tangent space into world space.
+105,Normal Map Decode,MATH,"Remaps a normal's value from [0,1] to [-1,1] by applying 2x-1."
+106,Normalize,MATH,Outputs a normalized vector.
+107,One Minus (RealityKit),MATH,One Minus
+108,Place 2D,MATH,Transforms UV texture coordinates for 2D texture placement.
+109,Power,MATH,Raises the incoming value to an exponent.
+110,Rotate 2D,MATH,Rotates a Vector2 (Float) about the origin in 2D.
+111,Rotate 3D,MATH,Rotates a Vector3 (Float)about a specified unit axis vector.
+112,Round,MATH,"Rounds to the nearest integer value, per-channel. floor(i + 0.5)"
+113,Safe Power,MATH,Raises the incoming value to an exponent and assigns the sign of the base to the output.
+114,Sign,MATH,"The per-channel sign of the input value: -1 for negative, +1 for positive, 0 for zero."
+115,Sin,MATH,The sine of the incoming value in radians.
+116,Square Root,MATH,The square root of the incoming value.
+117,Subtract,MATH,Subtracts two values.
+118,Tan,MATH,The tangent of the incoming value in radians.
+119,Transform Matrix,MATH,Transforms a vector by a matrix.
+120,Transform Normal,MATH,Transforms a normal from one space to another.
+121,Transform Point,MATH,Transforms a coordinate from one space to another.
+122,Transform Vector,MATH,Transforms a vector3 from one space to another.
+123,Transpose,MATH,Outputs the transpose of a matrix.
+124,Dot,ORGANIZATION,A pass-through node used for visually routing edges in the graph.
+125,Preview Surface,PBR,A MaterialX version of USD Preview Surface.
+126,Boolean,PROCEDURAL,A constant boolean(true/false)value.
+127,Color3 (Float),PROCEDURAL,A constant Color3 (Float) value.
+128,Color4 (Float),PROCEDURAL,A constant Color4 (Float) value.
+129,Float,PROCEDURAL,A constant floating-point numeric value.
+130,Half,PROCEDURAL,A constant half-precision floating-point numeric value.
+131,Image File,PROCEDURAL,A constant path referring to an arbitrary image file on disk.
+132,Integer,PROCEDURAL,A constant integer numeric value.
+133,Integer2,PROCEDURAL,A constant Integer2 value
+134,Integer3,PROCEDURAL,A constant Integer3 value
+135,Integer4,PROCEDURAL,A constant Integer4 value
+136,Matrix2x2 (Float),PROCEDURAL,A constant Matrix2x2 (Float) value. (Row-major order.)
+137,Matrix3x3 (Float),PROCEDURAL,A constant Matrix3x3 (Float)value.(Row-major order.)
+138,Matrix4x4 (Float),PROCEDURAL,A constant Matrix4x4 (Float) value. (Row-major order.)
+139,String,PROCEDURAL,A constant string (text) value.
+140,Vector2 (Float),PROCEDURAL,A constant Vector2 (Float) value.
+141,Vector2 (Half),PROCEDURAL,A constant half-precision floating-point Vector2 numeric value.
+142,Vector3 (Float),PROCEDURAL,A constant Vector3 (Float) value.
+143,Vector3 (Half),PROCEDURAL,A constant half-precision floating-point Vector3 numeric value.
+144,Vector4 (Float),PROCEDURAL,A constant Vector4 (Float) value.
+145,Vector4 (Half),PROCEDURAL,A constant half-precision floating-point Vector4 numeric value.
+146,Camera Index Switch (RealityKit),REALITYKIT,Render different results for each eye in a stereoscopic render.
+147,Camera Position (RealityKit),REALITYKIT,The position of the camera in the scene.
+148,Cube Image (RealityKit),REALITYKIT,A texturecube with RealityKit properties. Adjustable level of detail.
+149,Cube Image Gradient (RealityKit),REALITYKIT,A texturecube with RealityKit properties. Level of detail gradient.
+150,Cube Image LOD (RealityKit),REALITYKIT,A texturecube with RealityKit properties. Explicit level of detail.
+151,Environment Radiance (RealityKit),REALITYKIT,"Returns an environment's diffuse and specular radiance value based on real-world environment, and an IBL map that is either a developer-provided map or a default map."
+152,Geometry Modifier (RealityKit),REALITYKIT,"A function that manipulates the location of a model's vertices, run once per vertex."
+153,Geometry Modifier Model To View (RealityKit),REALITYKIT,The model-to-view transformation Matrix4x4 (Float).
+154,Geometry Modifier Model To World (RealityKit),REALITYKIT,The model-to-world transformation Matrix4x4 (Float).
+155,Geometry Modifier Normal To World (RealityKit),REALITYKIT,The normal-to-world transformation Matrix3x3 (Float).
+156,Geometry Modifier Projection To View (RealityKit),REALITYKIT,The projection-to-view transformation Matrix4x4 (Float).
+157,Geometry Modifier Vertex ID(RealityKit),REALITYKIT,Geometry Modifier Vertex ID (RealityKit)
+158,Geometry Modifier View To Projection (RealityKit),REALITYKIT,The view-to-projection transformation Matrix4x4 (Float).
+159,Geometry Modifier World To Model (RealityKit),REALITYKIT,The world-to-model transformation Matrix4x4 (Float).
+160,Image 2D (RealityKit),REALITYKIT,A texture with RealityKit properties. Adjustable level of detail.
+161,Image 2D Gradient (RealityKit),REALITYKIT,A texture with RealityKit properties. Level of detail gradient.
+162,Image 2D Gradient Pixel (RealityKit),REALITYKIT,A texture with RealityKit properties. Level of detail gradient Pixel texture coordinates.
+163,Image 2D LOD (RealityKit),REALITYKIT,A texture with RealityKit properties. Explicit level of detail.
+164,Image 2D LOD Pixel (RealityKit),REALITYKIT,A texture with RealityKit properties. Explicit level of detail. Pixel texture coordinates.
+165,Image 2D Pixel (RealityKit),REALITYKIT,A texture with RealityKit properties. Adjustable level of detail. Pixel texture coordinates.
+166,Image 2D Read (RealityKit),REALITYKIT,Direct texture read.
+167,Occlusion Surface (RealityKit),REALITYKIT,A surface shader that defines properties for a RealityKit Occlusion material that does not receive dynamic lighting.
+168,PBR Surface (RealityKit),REALITYKIT,A surface shader that defines properties for a RealityKit Physically Based Rendering material.
+169,Shadow Receiving Occlusion Surface (RealityKit),REALITYKIT,A surface shader that defines properties for a RealityKit Occlusion material that receives dynamic lighting.
+170,Surface Custom Attribute (RealityKit),REALITYKIT,An interpolated user-defined Vector4 (Float) data that's from the geometry modifier.
+171,Surface Custom Attribute 0 (vector2h),REALITYKIT,An interpolated user-defined Vector2 (Half)data that's from the geometry modifier.
+172,Surface Custom Attribute 0 (vector4h),REALITYKIT,An interpolated user-defined Vector4 (Half) data that's from the geometry modifier.
+173,Surface Custom Attribute 1 (vector2h),REALITYKIT,An interpolated user-defined Vector2 (Half) data that's from the geometry modifier.
+174,Surface Custom Attribute 1 (vector4h),REALITYKIT,An interpolated user-defined Vector4 (Half) data that's from the geometry modifier.
+175,Surface Custom Attribute 2 (vector4h),REALITYKIT,An interpolated user-defined Vector4 (Half) data that's from the geometry modifier.
+176,Surface Custom Attribute 3 (vector4h),REALITYKIT,An interpolated user-defined Vector4 (Half) data that's from the geometry modifier.
+177,Surface Model To View (RealityKit),REALITYKIT,The model-to-view transformation Matrix4x4 (Float).
+178,Surface Model To World (RealityKit),REALITYKIT,The model-to-world transformation Matrix4x4 (Float).
+179,Surface Projection To View (RealityKit),REALITYKIT,The projection-to-view transformation Matrix4x4 (Float).
+180,Surface Screen Position (RealityKit),REALITYKIT,The coordinates of the currently-processed data in screen space.
+181,Surface View Direction (RealityKit),REALITYKIT,A vector from a position in the scene to the view reference point.
+182,Surface View To Projection (RealityKit),REALITYKIT,The view-to-projection transformation Matrix4x4 (Float).
+183,Surface World To View (RealityKit),REALITYKIT,The world-to-view transformation Matrix4x4 (Float).
+184,Unlit Surface (RealityKit),REALITYKIT,A surface shader that defines properties for a RealityKit Unlit material.
+185,View Direction (RealityKit),REALITYKIT,A vector from a position in the scene to the view.
+186,Preview Surface,SURFACE,A MaterialX version of USD Preview Surface.
