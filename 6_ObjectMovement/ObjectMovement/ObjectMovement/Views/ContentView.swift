@@ -15,7 +15,7 @@ struct ContentView: View {
     @State private var immersiveSpaceIsShown = false
     @State private var enableMovement = false
     
-    @Environment(ViewModel.self) var model;
+    @Environment(ViewModel.self) var model
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
 

@@ -51,7 +51,7 @@ struct MovementView: View {
             dragEntity = ModelEntity(
                 mesh: .generateSphere(radius: radius),
                 materials: [SimpleMaterial(color: .blue, isMetallic: false)],
-                collisionShape: .generateBox(size: SIMD3<Float>(repeating: radius)),
+                collisionShape: .generateSphere(radius: radius),
                 mass: 0.0
             )
             dragEntity.position = SIMD3(x: 0.6, y: 1.5, z: -2)
