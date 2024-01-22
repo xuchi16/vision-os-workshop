@@ -3,7 +3,7 @@ A workshop for vision os development.
 
 # Contents
 
-| No | Project | Screenshot | Blog/X |
+| No | Project | Screenshot | X / Blog |
 |:--|:--|:--:|:--:|
 | 1 | [Window, Volume and Space](1_WindowVolumeSpace) | ![s1](/1_WindowVolumeSpace/1_WindowVolumeSpace.png)| [X](https://twitter.com/xchester16/status/1739982269841080427) / [zh](https://xz3t11cmy1.feishu.cn/wiki/UaYSw4pyniTSeWkMk4ScJUS0nbb) |
 | 2 | [Position and Size](2_PositionAndSize) | ![s2](/2_PositionAndSize/2_PositionAndSize.png) | [X](https://twitter.com/xchester16/status/1740289283502776380) / [zh](https://xz3t11cmy1.feishu.cn/wiki/R9RewMYggiOPN5kUkkcc1Ms3nBe) |
