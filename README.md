@@ -14,3 +14,5 @@ A workshop for vision os development.
 | 7 | [Face Me](7_FaceMe) | ![s2](/7_FaceMe/7_FaceMe.png) | [X](https://twitter.com/xchester16/status/1745098055618314432) / [zh](https://xz3t11cmy1.feishu.cn/wiki/S5vjwUDWYivnN1kd9hWcHFURn6f) |
 | 8 | [Surface Shaders](8_SurfaceShaders) | ![s2](/8_SurfaceShaders/8_SurfaceShaders.png) | [X](https://twitter.com/xchester16/status/1745873603802136946) / [zh](https://xz3t11cmy1.feishu.cn/wiki/RFMhw76FeiriH4kRX0BcCL3GnAe) |
 | 9 | [Car Control](9_CarControl) | ![s2](/9_CarControl/9_CarControl.png) | [X](https://twitter.com/xchester16/status/1746941257862242665) / [zh](https://xz3t11cmy1.feishu.cn/wiki/OkFnwfAzaiUXBgkWobxc67Cin5e)|
+| 10 | [Roughness, Metallic and Opacity](10_PBR) | ![s2](/10_PBR/10_PBR.png) | [X](https://twitter.com/xchester16/status/1750551209206047129) / [zh](https://xz3t11cmy1.feishu.cn/wiki/RyrAwSXmEisRRnkNw5OcFwR5nme)|
+
