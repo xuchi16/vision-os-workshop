@@ -5,46 +5,397 @@
     upAxis = "Y"
 )
 
-def Xform "Root"
+def Xform "Root" (
+    customData = {
+        float3 rotationEulerHint = (0, -0.32105017, 0)
+    }
+)
 {
-    reorder nameChildren = ["Sphere_Left", "Sphere_Right", "GridMaterial"]
-    def Sphere "Sphere_Right" (
+    quatf xformOp:orient = (0.9871435, 0, -0.15983655, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+    def Xform "Dragon" (
         active = true
-        prepend apiSchemas = ["MaterialBindingAPI"]
+        customData = {
+            float3 rotationEulerHint = (0, 0, 0)
+        }
     )
     {
-        rel material:binding = </Root/GridMaterial/GridMaterial> (
-            bindMaterialAs = "weakerThanDescendants"
-        )
-        double radius = 0.1
         quatf xformOp:orient = (1, 0, 0, 0)
-        float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (0.5, 1.5, -1.5)
+        float3 xformOp:scale = (0.6, 0.6, 0.6)
+        float3 xformOp:translate = (6.616361e-9, 0.3979888, -1.001728)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Material "DragonMaterial"
+        {
+            token outputs:mtlx:surface.connect = </Root/Dragon/DragonMaterial/PreviewSurface.outputs:out>
+            token outputs:realitykit:vertex.connect = </Root/Dragon/DragonMaterial/Geometry.outputs:out>
+            float2 ui:nodegraph:realitykit:subgraphOutputs:pos = (388.39453, 47.351562)
+            float2 ui:nodegraph:realitykit:subgraphOutputs:size = (181.5, 99)
+            int ui:nodegraph:realitykit:subgraphOutputs:stackingOrder = 146
+
+            def Shader "PreviewSurface"
+            {
+                uniform token info:id = "ND_UsdPreviewSurface_surfaceshader"
+                float inputs:clearcoat
+                float inputs:clearcoatRoughness
+                color3f inputs:diffuseColor = (0.34901962, 0.6784314, 0.76862746) (
+                    colorSpace = "srgb_texture"
+                )
+                color3f inputs:diffuseColor.connect = </Root/Dragon/DragonMaterial/Constant.outputs:out>
+                color3f inputs:emissiveColor.connect = </Root/Dragon/DragonMaterial/Image.outputs:out>
+                float inputs:ior
+                float inputs:metallic
+                float3 inputs:normal
+                float inputs:occlusion.connect = None
+                float inputs:opacity = 1
+                float inputs:opacityThreshold
+                float inputs:roughness
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (109.02344, -122.140625)
+                float2 ui:nodegraph:node:size = (159.5, 307)
+                int ui:nodegraph:node:stackingOrder = 192
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:normal", "Advanced"]
+            }
+
+            def Shader "Combine3"
+            {
+                uniform token info:id = "ND_combine3_vector3"
+                float inputs:in1
+                float inputs:in2.connect = </Root/Dragon/DragonMaterial/Remap.outputs:out>
+                float inputs:in3
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-565.0039, -10.066406)
+                float2 ui:nodegraph:node:size = (145, 54)
+                int ui:nodegraph:node:stackingOrder = 178
+            }
+
+            def Shader "Normal"
+            {
+                uniform token info:id = "ND_image_vector3"
+                asset inputs:file = @DragonData/dragon_n.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float3 outputs:out
+                float2 ui:nodegraph:node:pos = (-904.2246, 224.11328)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 175
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["outputs:out", "inputs:default", "inputs:texcoord"]
+            }
+
+            def Shader "Diffuse"
+            {
+                uniform token info:id = "ND_image_color3"
+                asset inputs:file = @DragonData/dragon_d.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-365.0703, -109.47656)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 199
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:default", "inputs:texcoord"]
+            }
+
+            def Shader "Geometry"
+            {
+                uniform token info:id = "ND_realitykit_geometrymodifier_vertexshader"
+                float3 inputs:bitangent
+                color4f inputs:color
+                float3 inputs:modelPositionOffset.connect = </Root/Dragon/DragonMaterial/Combine3.outputs:out>
+                float3 inputs:normal.connect = </Root/Dragon/DragonMaterial/Normal.outputs:out>
+                float4 inputs:userAttribute
+                half2 inputs:userAttributeHalf2_1
+                half4 inputs:userAttributeHalf4_0
+                half4 inputs:userAttributeHalf4_1
+                float2 inputs:uv0
+                float2 inputs:uv1
+                token outputs:out
+                float2 ui:nodegraph:node:pos = (-272.95703, 260.57812)
+                float2 ui:nodegraph:node:size = (196.5, 325)
+                int ui:nodegraph:node:stackingOrder = 171
+            }
+
+            def Shader "Height"
+            {
+                uniform token info:id = "ND_image_float"
+                asset inputs:file = @DragonData/dragon_h.png@
+                string inputs:filtertype
+                string inputs:vaddressmode
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-881.47266, -62.664062)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 173
+                string[] ui:nodegraph:realitykit:node:attributesShowingChildren = ["inputs:file", "inputs:uaddressmode", "inputs:uaddressmode", "inputs:texcoord", "inputs:vaddressmode"]
+            }
+
+            def Shader "Remap"
+            {
+                uniform token info:id = "ND_remap_float"
+                float inputs:in.connect = </Root/Dragon/DragonMaterial/Height.outputs:out>
+                float inputs:inhigh
+                float inputs:inlow
+                float inputs:outhigh = 0.2
+                float outputs:out
+                float2 ui:nodegraph:node:pos = (-706.1289, 95.89453)
+                float2 ui:nodegraph:node:size = (94, 181)
+                int ui:nodegraph:node:stackingOrder = 200
+            }
+
+            def Shader "Constant"
+            {
+                uniform token info:id = "ND_constant_color3"
+                color3f inputs:value = (0, 0, 0) (
+                    colorSpace = "srgb_texture"
+                )
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-134.71191, -182.45703)
+                float2 ui:nodegraph:node:size = (151, 53)
+                int ui:nodegraph:node:stackingOrder = 198
+            }
+
+            def Shader "Image"
+            {
+                uniform token info:id = "ND_image_color3"
+                color3f inputs:default
+                asset inputs:file = @DragonData/dragon_ao.png@
+                float2 inputs:texcoord
+                color3f outputs:out
+                float2 ui:nodegraph:node:pos = (-169.0586, -23.515625)
+                float2 ui:nodegraph:node:size = (148.5, 199)
+                int ui:nodegraph:node:stackingOrder = 195
+            }
+        }
+
+        def "DragonCircle" (
+            active = false
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            customData = {
+                float3 rotationEulerHint = (1.5735383, 0, 0)
+            }
+            references = @ExpData/RealityKitContent.rkassets/FlatTerrain.usdz@
+        )
+        {
+            rel material:binding = </Root/DragonMaterial> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            quatf xformOp:orient = (0.7061367, 0.7080755, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (-3.1975923, 0.001842808, -0.67216927)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            over "Looks"
+            {
+                over "DioramaTerrain_matSG"
+                {
+                    token outputs:mtlx:surface
+                    token outputs:realitykit:vertex
+                }
+            }
+        }
+
+        def "FrontStone" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+            references = @plan_rotate_axis_subdivide_10000.usdz@
+        )
+        {
+            rel material:binding = </Root/Dragon/DragonMaterial> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            quatf xformOp:orient = (0.5, 0.5, 0.50000006, 0.49999994)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (-3.3760443e-9, 1.5, -1.54)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        }
+
+        def Material "Material"
+        {
+            token outputs:mtlx:surface
+            token outputs:realitykit:vertex
+            prepend token outputs:surface.connect = </Root/Dragon/Material/UsdPreviewSurface.outputs:surface>
+
+            def Shader "UsdPreviewSurface"
+            {
+                uniform token info:id = "UsdPreviewSurface"
+                color3f inputs:diffuseColor = (0.8627451, 0.8627451, 0.8627451) (
+                    colorSpace = "srgb_texture"
+                )
+                token outputs:surface
+            }
+        }
+
+        def Xform "Frame" (
+            active = true
+            prepend apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            rel material:binding = </Root/SmoothConcrete> (
+                bindMaterialAs = "weakerThanDescendants"
+            )
+            quatf xformOp:orient = (1, 0, 0, 0)
+            float3 xformOp:scale = (1, 1, 1)
+            float3 xformOp:translate = (0, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def Cube "Down" (
+                active = true
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                customData = {
+                    float3 rotationEulerHint = (0, 0, 0)
+                }
+            )
+            {
+                rel material:binding = </Root/Dragon/Material> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double size = 0.2
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (12, 1, 1)
+                float3 xformOp:translate = (0, 0.5, -1.5)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Material "DefaultMaterial"
+                {
+                    prepend token outputs:surface.connect = </Root/Dragon/Frame/Down/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                    def Shader "DefaultSurfaceShader"
+                    {
+                        uniform token info:id = "UsdPreviewSurface"
+                        color3f inputs:diffuseColor = (1, 1, 1)
+                        float inputs:roughness = 0.75
+                        token outputs:surface
+                    }
+                }
+            }
+
+            def Cube "Top" (
+                active = true
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/Dragon/Material> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double size = 0.2
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (12, 1, 1)
+                float3 xformOp:translate = (0, 2.5, -1.5)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Material "DefaultMaterial"
+                {
+                    token outputs:surface.connect = </Root/Dragon/Frame/Top/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                    def Shader "DefaultSurfaceShader"
+                    {
+                        uniform token info:id = "UsdPreviewSurface"
+                        color3f inputs:diffuseColor = (1, 1, 1)
+                        float inputs:roughness = 0.75
+                        token outputs:surface
+                    }
+                }
+            }
+
+            def Cube "Left" (
+                active = true
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                customData = {
+                    float3 rotationEulerHint = (0, 0, 0)
+                }
+            )
+            {
+                rel material:binding = </Root/Dragon/Material> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double size = 0.2
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 10, 1)
+                float3 xformOp:translate = (-1.1, 1.478442, -1.5)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Material "DefaultMaterial"
+                {
+                    token outputs:surface.connect = </Root/Dragon/Frame/Left/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                    def Shader "DefaultSurfaceShader"
+                    {
+                        uniform token info:id = "UsdPreviewSurface"
+                        color3f inputs:diffuseColor = (1, 1, 1)
+                        float inputs:roughness = 0.75
+                        token outputs:surface
+                    }
+                }
+            }
+
+            def Cube "Right" (
+                active = true
+                prepend apiSchemas = ["MaterialBindingAPI"]
+                customData = {
+                    float3 rotationEulerHint = (0, 0, 0)
+                }
+            )
+            {
+                rel material:binding = </Root/Dragon/Material> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double size = 0.2
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (1, 10, 1)
+                float3 xformOp:translate = (1.1, 1.478442, -1.5)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Material "DefaultMaterial"
+                {
+                    token outputs:surface.connect = </Root/Dragon/Frame/Right/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                    def Shader "DefaultSurfaceShader"
+                    {
+                        uniform token info:id = "UsdPreviewSurface"
+                        color3f inputs:diffuseColor = (1, 1, 1)
+                        float inputs:roughness = 0.75
+                        token outputs:surface
+                    }
+                }
+            }
+
+            def Cube "Back" (
+                active = true
+                prepend apiSchemas = ["MaterialBindingAPI"]
+            )
+            {
+                rel material:binding = </Root/Dragon/Material> (
+                    bindMaterialAs = "weakerThanDescendants"
+                )
+                double size = 0.2
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (12, 11, 0.3)
+                float3 xformOp:translate = (0, 1.5, -1.5984482)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+                def Material "DefaultMaterial"
+                {
+                    token outputs:surface.connect = </Root/Dragon/Frame/Back/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+
+                    def Shader "DefaultSurfaceShader"
+                    {
+                        uniform token info:id = "UsdPreviewSurface"
+                        color3f inputs:diffuseColor = (1, 1, 1)
+                        float inputs:roughness = 0.75
+                        token outputs:surface
+                    }
+                }
+            }
+        }
     }
 
-    def Sphere "Sphere_Left" (
-        active = true
-        prepend apiSchemas = ["MaterialBindingAPI"]
-    )
+    def "Group"
     {
-        rel material:binding = </Root/GridMaterial/GridMaterial> (
-            bindMaterialAs = "weakerThanDescendants"
-        )
-        double radius = 0.1
-        quatf xformOp:orient = (1, 0, 0, 0)
-        float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (-0.5, 1.5, -1.5)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-    }
-
-    def "GridMaterial" (
-        active = true
-        prepend references = @Materials/GridMaterial.usda@
-    )
-    {
-        float3 xformOp:scale = (1, 1, 1)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+        def "FrontStone"
+        {
+            def "Mesh"
+            {
+            }
+        }
     }
 }
 
