@@ -20,6 +20,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("Video Material")
+                .font(.title)
 
             Toggle("Show Immersive Space", isOn: $showImmersiveSpace)
                 .toggleStyle(.button)

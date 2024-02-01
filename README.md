@@ -16,3 +16,4 @@ A workshop for vision os development.
 | 9 | [Car Control](9_CarControl) | ![s2](/9_CarControl/9_CarControl.png) | [X](https://twitter.com/xchester16/status/1746941257862242665) / [zh](https://xz3t11cmy1.feishu.cn/wiki/OkFnwfAzaiUXBgkWobxc67Cin5e)|
 | 10 | [Roughness, Metallic and Opacity](10_PBR) | ![s2](/10_PBR/10_PBR.png) | [X](https://twitter.com/xchester16/status/1750551209206047129) / [zh](https://xz3t11cmy1.feishu.cn/wiki/RyrAwSXmEisRRnkNw5OcFwR5nme)|
 | 11 | [Geometry Shader](11_GeometryShader) | ![s2](/11_GeometryShader/11_GeometryShader.png) | [X](https://twitter.com/xchester16/status/1752354145154261262) / [zh](https://xz3t11cmy1.feishu.cn/wiki/CePOwQrs5iommEkDGPbckerynve)|
+| 12 | [Video Material](12_VideoMaterial) | ![s2](/12_VideoMaterial/12_VideoMaterial.png) | [X](https://twitter.com/xchester16/status/1752979955426951322) / [zh](https://xz3t11cmy1.feishu.cn/wiki/YIOqwhtlriQtvbk99tyc8OAZnCx)|
