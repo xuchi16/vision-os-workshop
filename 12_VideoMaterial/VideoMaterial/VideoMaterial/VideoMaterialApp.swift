@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct VideoMaterialApp: App {
+    
+    private var playModel = PlayModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -16,7 +19,7 @@ struct VideoMaterialApp: App {
         .defaultSize(CGSize(width: 300, height: 400))
 
         ImmersiveSpace(id: "ImmersiveSpace") {
-            ImmersiveView()
+            ImmersiveView(playModel: playModel)
         }
     }
 }

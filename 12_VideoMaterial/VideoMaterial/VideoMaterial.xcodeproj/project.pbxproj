@@ -16,6 +16,8 @@
 		C2D730232B6B71DA00B33C08 /* tv_retro.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C2D730222B6B71DA00B33C08 /* tv_retro.usdz */; };
 		C2D730292B6B83EE00B33C08 /* realitykit-og-twitter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2D730282B6B83EE00B33C08 /* realitykit-og-twitter.jpg */; };
 		C2D730312B6B876800B33C08 /* GetReadyRemixRB.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C2D730302B6B876800B33C08 /* GetReadyRemixRB.mp4 */; };
+		C2D730372B6B98D200B33C08 /* ControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D730362B6B98D200B33C08 /* ControllerView.swift */; };
+		C2D730392B6B9B0A00B33C08 /* PlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D730382B6B9B0A00B33C08 /* PlayModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		C2D730222B6B71DA00B33C08 /* tv_retro.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = tv_retro.usdz; sourceTree = "<group>"; };
 		C2D730282B6B83EE00B33C08 /* realitykit-og-twitter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "realitykit-og-twitter.jpg"; sourceTree = "<group>"; };
 		C2D730302B6B876800B33C08 /* GetReadyRemixRB.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GetReadyRemixRB.mp4; sourceTree = "<group>"; };
+		C2D730362B6B98D200B33C08 /* ControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerView.swift; sourceTree = "<group>"; };
+		C2D730382B6B9B0A00B33C08 /* PlayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,9 +71,11 @@
 				C2D730112B6AA4FF00B33C08 /* VideoMaterialApp.swift */,
 				C2D730132B6AA4FF00B33C08 /* ContentView.swift */,
 				C2D730152B6AA4FF00B33C08 /* ImmersiveView.swift */,
+				C2D730362B6B98D200B33C08 /* ControllerView.swift */,
 				C2D730172B6AA50000B33C08 /* Assets.xcassets */,
 				C2D7301C2B6AA50000B33C08 /* Info.plist */,
 				C2D730192B6AA50000B33C08 /* Preview Content */,
+				C2D730382B6B9B0A00B33C08 /* PlayModel.swift */,
 			);
 			path = VideoMaterial;
 			sourceTree = "<group>";
@@ -170,7 +176,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2D730142B6AA4FF00B33C08 /* ContentView.swift in Sources */,
+				C2D730392B6B9B0A00B33C08 /* PlayModel.swift in Sources */,
 				C2D730122B6AA4FF00B33C08 /* VideoMaterialApp.swift in Sources */,
+				C2D730372B6B98D200B33C08 /* ControllerView.swift in Sources */,
 				C2D730162B6AA4FF00B33C08 /* ImmersiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
