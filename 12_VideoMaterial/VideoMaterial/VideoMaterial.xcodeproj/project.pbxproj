@@ -13,6 +13,9 @@
 		C2D730162B6AA4FF00B33C08 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D730152B6AA4FF00B33C08 /* ImmersiveView.swift */; };
 		C2D730182B6AA50000B33C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2D730172B6AA50000B33C08 /* Assets.xcassets */; };
 		C2D7301B2B6AA50000B33C08 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2D7301A2B6AA50000B33C08 /* Preview Assets.xcassets */; };
+		C2D730232B6B71DA00B33C08 /* tv_retro.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C2D730222B6B71DA00B33C08 /* tv_retro.usdz */; };
+		C2D730292B6B83EE00B33C08 /* realitykit-og-twitter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2D730282B6B83EE00B33C08 /* realitykit-og-twitter.jpg */; };
+		C2D730312B6B876800B33C08 /* GetReadyRemixRB.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C2D730302B6B876800B33C08 /* GetReadyRemixRB.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		C2D730172B6AA50000B33C08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2D7301A2B6AA50000B33C08 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C2D7301C2B6AA50000B33C08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2D730222B6B71DA00B33C08 /* tv_retro.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = tv_retro.usdz; sourceTree = "<group>"; };
+		C2D730282B6B83EE00B33C08 /* realitykit-og-twitter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "realitykit-og-twitter.jpg"; sourceTree = "<group>"; };
+		C2D730302B6B876800B33C08 /* GetReadyRemixRB.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GetReadyRemixRB.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,9 @@
 		C2D7300D2B6AA4FF00B33C08 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				C2D730282B6B83EE00B33C08 /* realitykit-og-twitter.jpg */,
+				C2D730222B6B71DA00B33C08 /* tv_retro.usdz */,
+				C2D730302B6B876800B33C08 /* GetReadyRemixRB.mp4 */,
 				C2D7300E2B6AA4FF00B33C08 /* RealityKitContent */,
 			);
 			path = Packages;
@@ -145,7 +154,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D730312B6B876800B33C08 /* GetReadyRemixRB.mp4 in Resources */,
+				C2D730232B6B71DA00B33C08 /* tv_retro.usdz in Resources */,
 				C2D7301B2B6AA50000B33C08 /* Preview Assets.xcassets in Resources */,
+				C2D730292B6B83EE00B33C08 /* realitykit-og-twitter.jpg in Resources */,
 				C2D730182B6AA50000B33C08 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

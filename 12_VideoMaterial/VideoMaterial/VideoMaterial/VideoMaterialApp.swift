@@ -13,6 +13,7 @@ struct VideoMaterialApp: App {
         WindowGroup {
             ContentView()
         }
+        .defaultSize(CGSize(width: 300, height: 400))
 
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
