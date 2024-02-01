@@ -20,13 +20,10 @@ struct ImmersiveView: View {
             let tv = try! await Entity(named: "tv_retro")
             tv.position = SIMD3<Float>(x: 0, y: 1, z: -1.5)
             if let screen = tv.findEntity(named: "tv_retro_2_RetroTVScreen") as? ModelEntity {
-                
                 let player = playModel.player
-                
                 let material = VideoMaterial(avPlayer: player)
                 screen.model?.materials = [material]
                 player.play()
-                
             }
             
             entity.addChild(tv)

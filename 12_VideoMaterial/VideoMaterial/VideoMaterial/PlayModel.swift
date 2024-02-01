@@ -35,7 +35,6 @@ class PlayModel: ObservableObject {
     }
     
     private func observePlayer() {
-        print("hey")
         player.publisher(for: \.timeControlStatus)
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [weak self] status in

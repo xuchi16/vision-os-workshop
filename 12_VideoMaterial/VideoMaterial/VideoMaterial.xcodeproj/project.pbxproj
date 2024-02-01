@@ -72,10 +72,10 @@
 				C2D730132B6AA4FF00B33C08 /* ContentView.swift */,
 				C2D730152B6AA4FF00B33C08 /* ImmersiveView.swift */,
 				C2D730362B6B98D200B33C08 /* ControllerView.swift */,
+				C2D730382B6B9B0A00B33C08 /* PlayModel.swift */,
 				C2D730172B6AA50000B33C08 /* Assets.xcassets */,
 				C2D7301C2B6AA50000B33C08 /* Info.plist */,
 				C2D730192B6AA50000B33C08 /* Preview Content */,
-				C2D730382B6B9B0A00B33C08 /* PlayModel.swift */,
 			);
 			path = VideoMaterial;
 			sourceTree = "<group>";

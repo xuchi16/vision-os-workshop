@@ -11,10 +11,8 @@ struct ControllerView: View {
     @ObservedObject var playModel = PlayModel()
     
     var body: some View {
-        
         Button(action: {
             playModel.togglePlayPause()
-            
         }) {
             Image(systemName: playModel.isPlaying ? "pause.fill" : "play.fill")
                 .font(.system(size: 40))

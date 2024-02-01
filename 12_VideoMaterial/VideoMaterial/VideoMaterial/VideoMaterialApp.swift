@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct VideoMaterialApp: App {
     
-    private var playModel = PlayModel()
+    @State private var playModel = PlayModel()
     
     var body: some Scene {
         WindowGroup {
@@ -20,6 +20,7 @@ struct VideoMaterialApp: App {
 
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView(playModel: playModel)
+
         }
     }
 }
