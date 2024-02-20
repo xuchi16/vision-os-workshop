@@ -11,7 +11,8 @@ import RealityKitContent
 
 struct ImmersiveView: View {
     @ObservedObject var arkitSessionManager = ARKitSessionManager()
-
+    @State private var skybox = Entity()
+    
     var body: some View {
         
         RealityView { content in
@@ -28,7 +29,6 @@ struct ImmersiveView: View {
             }
             sphere.components.set(ImageBasedLightComponent(source: .single(environment)))
             sphere.components.set(ImageBasedLightReceiverComponent(imageBasedLight: sphere))
-            print("sphere rotation: \(sphere.transform.rotation)")
             
             // Skybox
             guard let resource = try? await TextureResource(named: "shanghai_bund_4k") else {
@@ -37,28 +37,50 @@ struct ImmersiveView: View {
             var material = UnlitMaterial()
             material.color = .init(texture: .init(resource))
             
-            let skybox = Entity()
             skybox.components.set(ModelComponent(
-                mesh: .generateSphere(radius: 0.25),
+                mesh: .generateSphere(radius: 1000),
                 materials: [material]
             ))
-            print("rotation: \(skybox.transform.rotation)")
-            
             skybox.position = [-0.6, 1.5, -2]
-            skybox.scale *= .init(x: -1, y: 1, z: 1)
+            
+            // Reverse x to let the picture applied to the inner side of skybox
+            skybox.scale = .init(x: -1 * abs(skybox.scale.x), y: skybox.scale.y, z: skybox.scale.z)
             
             content.add(skybox)
-            
-            let worldRotation = skybox.orientation(relativeTo: nil)
-            print("world rotation: \(worldRotation)")
-            
-            let cood = arkitSessionManager.getOriginFromDeviceTransform()
-            let entityPosition = SIMD3<Float>(0, skybox.transform.translation.y, 0)
-            skybox.look(at: entityPosition, from: skybox.transform.translation, relativeTo: nil)
         }
         .task {
             await arkitSessionManager.startSession()
+            
+            // The texture of the skybox is always facing the camera while the IBL is fixed worldwide
+            // So we need to detect the rotation of camera and counter-rotate the skybox so that the IBL reflection fits the skybox image
+            
+            // Get the camera's transform
+            let matrix = arkitSessionManager.getOriginFromDeviceTransform()
+            
+            // Calculate headset rotation in Y axis, there're 2 ways whose results are close
+            // Solution 1. Matrix
+            let angleYByMatrix = atan2(-matrix.columns.0.z, matrix.columns.2.z)
+            let angleYByMatrixDegree = angleYByMatrix * 180.0 / .pi
+            print("2. Matrix: \(angleYByMatrixDegree)")
+            
+            // Solution 2. Quaternion
+            let quat: simd_quatf = simd_quatf(matrix)
+            let angleYByQuaternion = calculateYRotateByQuaternion(quat: quat)
+            let angleYByQuaternionDegree = angleYByQuaternion * 180 / .pi
+            print("3. Quaternion: \(angleYByQuaternionDegree)")
+            
+            // .pi / 2 is the offset of current texture
+            skybox.transform.rotation = simd_quatf(angle: -angleYByMatrix + .pi / 2, axis: [0, 1, 0])
+            
+            let skyRotationQuat = skybox.transform.rotation
+            let angleRadians = calculateYRotateByQuaternion(quat: skyRotationQuat)
+            let angleDegrees = angleRadians * 180 / .pi
+            print("Result. Skybox: \(angleDegrees)")
         }
+    }
+    
+    func calculateYRotateByQuaternion(quat: simd_quatf) -> Float {
+        return atan2(2 * (quat.real * quat.imag.y + quat.imag.x * quat.imag.z), 1 - 2 * (quat.imag.y * quat.imag.y + quat.imag.z * quat.imag.z))
     }
 }
 
