@@ -17,7 +17,7 @@
 		C2D730B52B73761E00B33C08 /* SkyboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D730B42B73761E00B33C08 /* SkyboxView.swift */; };
 		C2D730B72B73762900B33C08 /* ObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D730B62B73762900B33C08 /* ObjectView.swift */; };
 		C2D730BD2B7378A200B33C08 /* shanghai.skybox in Resources */ = {isa = PBXBuildFile; fileRef = C2D730BC2B7378A200B33C08 /* shanghai.skybox */; };
-		C2D730BF2B7379FB00B33C08 /* shanghai_bund_4k.exr in Resources */ = {isa = PBXBuildFile; fileRef = C2D730BE2B7379FB00B33C08 /* shanghai_bund_4k.exr */; };
+		C2D730BF2B7379FB00B33C08 /* shanghai_bund_4k_skybox.exr in Resources */ = {isa = PBXBuildFile; fileRef = C2D730BE2B7379FB00B33C08 /* shanghai_bund_4k_skybox.exr */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		C2D730B42B73761E00B33C08 /* SkyboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyboxView.swift; sourceTree = "<group>"; };
 		C2D730B62B73762900B33C08 /* ObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectView.swift; sourceTree = "<group>"; };
 		C2D730BC2B7378A200B33C08 /* shanghai.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; path = shanghai.skybox; sourceTree = SOURCE_ROOT; };
-		C2D730BE2B7379FB00B33C08 /* shanghai_bund_4k.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = shanghai_bund_4k.exr; sourceTree = "<group>"; };
+		C2D730BE2B7379FB00B33C08 /* shanghai_bund_4k_skybox.exr */ = {isa = PBXFileReference; lastKnownFileType = file; path = shanghai_bund_4k_skybox.exr; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 				C2D730A72B7375D500B33C08 /* ImmersiveView.swift */,
 				C2D730B42B73761E00B33C08 /* SkyboxView.swift */,
 				C2D730B62B73762900B33C08 /* ObjectView.swift */,
-				C2D730BE2B7379FB00B33C08 /* shanghai_bund_4k.exr */,
+				C2D730BE2B7379FB00B33C08 /* shanghai_bund_4k_skybox.exr */,
 				C2D730A92B7375D700B33C08 /* Assets.xcassets */,
 				C2D730AE2B7375D700B33C08 /* Info.plist */,
 				C2D730AB2B7375D700B33C08 /* Preview Content */,
@@ -162,7 +162,7 @@
 			files = (
 				C2D730AD2B7375D700B33C08 /* Preview Assets.xcassets in Resources */,
 				C2D730AA2B7375D700B33C08 /* Assets.xcassets in Resources */,
-				C2D730BF2B7379FB00B33C08 /* shanghai_bund_4k.exr in Resources */,
+				C2D730BF2B7379FB00B33C08 /* shanghai_bund_4k_skybox.exr in Resources */,
 				C2D730BD2B7378A200B33C08 /* shanghai.skybox in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

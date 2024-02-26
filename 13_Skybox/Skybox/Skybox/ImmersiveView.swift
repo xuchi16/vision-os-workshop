@@ -17,6 +17,10 @@ struct ImmersiveView: View {
         
         RealityView { content in
             // Object
+            guard let environment = try? await EnvironmentResource(named: "shanghai_bund_4k") else {
+                return
+            }
+            
             let sphere = ModelEntity(
                 mesh: .generateSphere(radius: 0.25),
                 materials: [SimpleMaterial(color: .white, isMetallic: true)]
@@ -24,14 +28,21 @@ struct ImmersiveView: View {
             sphere.position = [0.6, 1.5, -2]
             content.add(sphere)
             
-            guard let environment = try? await EnvironmentResource(named: "shanghai_bund_4k") else {
-                return
-            }
             sphere.components.set(ImageBasedLightComponent(source: .single(environment)))
             sphere.components.set(ImageBasedLightReceiverComponent(imageBasedLight: sphere))
             
+            let sphere2 = ModelEntity(
+                mesh: .generateSphere(radius: 0.25),
+                materials: [SimpleMaterial(color: .white, isMetallic: false)]
+            )
+            sphere2.position = [-0.6, 1.5, -2]
+            content.add(sphere2)
+            sphere2.components.set(ImageBasedLightComponent(source: .single(environment)))
+            sphere2.components.set(ImageBasedLightReceiverComponent(imageBasedLight: sphere2))
+
+            
             // Skybox
-            guard let resource = try? await TextureResource(named: "shanghai_bund_4k") else {
+            guard let resource = try? await TextureResource(named: "shanghai_bund_4k_skybox") else {
                 fatalError("Unable to load texture.")
             }
             var material = UnlitMaterial()
@@ -41,7 +52,6 @@ struct ImmersiveView: View {
                 mesh: .generateSphere(radius: 1000),
                 materials: [material]
             ))
-            skybox.position = [-0.6, 1.5, -2]
             
             // Reverse x to let the picture applied to the inner side of skybox
             skybox.scale = .init(x: -1 * abs(skybox.scale.x), y: skybox.scale.y, z: skybox.scale.z)
