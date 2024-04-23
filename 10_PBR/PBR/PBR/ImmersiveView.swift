@@ -59,6 +59,10 @@ struct ImmersiveView: View {
                             mass: 0.0
                         )
                         sphere.components.set(InputTargetComponent(allowedInputTypes: .indirect))
+                        
+                        // If you want FULL transparency, use OpacityComponent
+                        // var op = OpacityComponent()
+                        // sphere.components.set(OpacityComponent())
 
                         sphere.position = position
                         outerEntity.addChild(sphere)
