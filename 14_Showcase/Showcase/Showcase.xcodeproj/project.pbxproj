@@ -13,9 +13,7 @@
 		C2849BC82BFB8A2400BA7834 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2849BC72BFB8A2400BA7834 /* ImmersiveView.swift */; };
 		C2849BCA2BFB8A2600BA7834 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2849BC92BFB8A2600BA7834 /* Assets.xcassets */; };
 		C2849BCD2BFB8A2600BA7834 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2849BCC2BFB8A2600BA7834 /* Preview Assets.xcassets */; };
-		C2849BD62BFB8D2100BA7834 /* uss.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C2849BD52BFB8D2100BA7834 /* uss.usdz */; };
 		C2849BD82BFC3E6A00BA7834 /* gramophone.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C2849BD72BFC3E6A00BA7834 /* gramophone.usdz */; };
-		C2849BDA2BFC425400BA7834 /* toy_car.usdz in Resources */ = {isa = PBXBuildFile; fileRef = C2849BD92BFC425400BA7834 /* toy_car.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +25,7 @@
 		C2849BC92BFB8A2600BA7834 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2849BCC2BFB8A2600BA7834 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C2849BCE2BFB8A2600BA7834 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2849BD52BFB8D2100BA7834 /* uss.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = uss.usdz; sourceTree = "<group>"; };
 		C2849BD72BFC3E6A00BA7834 /* gramophone.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = gramophone.usdz; sourceTree = "<group>"; };
-		C2849BD92BFC425400BA7834 /* toy_car.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_car.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +90,7 @@
 		C2849BD42BFB8D1700BA7834 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C2849BD92BFC425400BA7834 /* toy_car.usdz */,
 				C2849BD72BFC3E6A00BA7834 /* gramophone.usdz */,
-				C2849BD52BFB8D2100BA7834 /* uss.usdz */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -164,9 +158,7 @@
 			files = (
 				C2849BCD2BFB8A2600BA7834 /* Preview Assets.xcassets in Resources */,
 				C2849BCA2BFB8A2600BA7834 /* Assets.xcassets in Resources */,
-				C2849BD62BFB8D2100BA7834 /* uss.usdz in Resources */,
 				C2849BD82BFC3E6A00BA7834 /* gramophone.usdz in Resources */,
-				C2849BDA2BFC425400BA7834 /* toy_car.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
