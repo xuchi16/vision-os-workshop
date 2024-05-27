@@ -20,3 +20,4 @@ A workshop for vision os development.
 | 13 | [Skybox and IBL](13_Skybox) | ![s2](/13_Skybox/13_Skybox.png) | [X](https://twitter.com/xchester16/status/1759915122779463923) / [zh](https://xz3t11cmy1.feishu.cn/wiki/Z3YtwcEjpiZGNAkkmHtcLaVrnSe)|
 | 14 | [Swing Rotation](14_Showcase) | ![s2](/14_Showcase/14_Showcase.png) | [X](https://x.com/xchester16/status/1792757295325319495) |
 | 15 | [Bounce](15_Restitution) | ![s2](/15_Restitution/15_Restitution.png) | [X](https://x.com/xchester16/status/1795097339587400103) |
+| 16 | [Friction](16_Friction) | ![s2](/16_Friction/16_Friction.png) | |
