@@ -10,20 +10,26 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
-    @State private var realityContent: RealityViewContent?
-    @State private var balls: [Entity] = []
+    @State private var entity = Entity()
+    @State private var balls: [[Entity]] = []
     private let interval: Float = 0.03
-    private let count = 10
+    private let count = 8
     
     var body: some View {
         RealityView { content in
-            content.add(getFloor())
+            for floor in getFloors() {
+                entity.addChild(floor)
+            }
             
             initBalls()
-            for ball in balls {
-                content.add(ball)
+            for row in balls {
+                for ball in row {
+                    entity.addChild(ball)
+                }
             }
-            realityContent = content
+            
+            entity.position = [0, 0, 0.3]
+            content.add(entity)
         }
         .toolbar {
             ToolbarItem(placement: .bottomOrnament) {
@@ -42,56 +48,73 @@ struct ContentView: View {
     
     func initBalls() {
         if balls.isEmpty {
-            for i in 0...count {
-                let intensity = Double(i) * 0.1
-                let ball = ModelEntity(
-                    mesh: .generateSphere(radius: 0.01),
-                    materials: [SimpleMaterial(color: UIColor(red: 0, green: intensity, blue: 0, alpha: 1), isMetallic: false)],
-                    collisionShape: .generateSphere(radius: 0.01),
-                    mass: 0
-                )
-                ball.physicsBody?.material = PhysicsMaterialResource.generate(friction: 0.005, restitution: 0.1 * Float(i))
-                balls.append(ball)
+            for _ in 0...count {
+                var row: [Entity] = []
+                for i in 0...count {
+                    let intensity = getIntensity(i)
+                    let ball = ModelEntity(
+                        mesh: .generateSphere(radius: 0.01),
+                        materials: [SimpleMaterial(color: UIColor(red: 0, green: intensity, blue: 0, alpha: 1), isMetallic: false)],
+                        collisionShape: .generateSphere(radius: 0.01),
+                        mass: 0
+                    )
+                    ball.physicsBody?.material = PhysicsMaterialResource.generate(friction: 0.005, restitution: 0.1 * Float(i))
+                    row.append(ball)
+                }
+                balls.append(row)
             }
         }
         resetBalls()
     }
     
     func resetBalls() {
-        var idx = 0
-        for ball in balls {
-            ball.position = [-Float(count) / 2 * interval + interval * Float(idx), -0.1, 0]
-            addGravity(mass: 0)
-            idx += 1
+        var z = 0
+        for row in balls {
+            var idx = 0
+            for ball in row {
+                ball.position = [-Float(count) / 2 * interval + interval * Float(idx), -0.1, -Float(count) / 2 * interval + interval * Float(z)]
+                addGravity(mass: 0)
+                idx += 1
+            }
+            z += 1
         }
     }
     
     private func addGravity(mass: Float) {
         var idx = 0
-        for ball in balls {
-            if let ball = ball as? ModelEntity, let _ = ball.physicsBody {
-                ball.physicsBody?.massProperties = PhysicsMassProperties(shape: .generateSphere(radius: 0.01), mass: mass)
+        for row in balls {
+            for ball in row {
+                if let ball = ball as? ModelEntity, let _ = ball.physicsBody {
+                    ball.physicsBody?.massProperties = PhysicsMassProperties(shape: .generateSphere(radius: 0.01), mass: mass)
+                }
+                idx += 1
             }
-            idx += 1
         }
     }
     
-    func getFloor() -> Entity {
-        let floor = ModelEntity(
-            mesh: .generateBox(width: 0.5, height: 0.01, depth: interval),
-            materials: [SimpleMaterial(color: .brown, isMetallic: false)],
-            collisionShape: .generateBox(width: 0.5, height: 0.01, depth: interval),
-            mass: 0
-        )
-        if let _ = floor.physicsBody {
-            print("Floor body")
-            floor.physicsBody?.material = PhysicsMaterialResource.generate(friction: 0.005, restitution: 0.2)
+    func getFloors() -> [Entity] {
+        var floors: [Entity] = []
+        for i in 0...count {
+            let intensity = getIntensity(i)
+            let floor = ModelEntity(
+                mesh: .generateBox(width: 0.5, height: 0.01, depth: interval),
+                materials: [SimpleMaterial(color: UIColor(red: 0, green: intensity, blue: 0, alpha: 1), isMetallic: false)],
+                collisionShape: .generateBox(width: 0.5, height: 0.01, depth: interval),
+                mass: 0
+            )
+            if let _ = floor.physicsBody {
+                floor.physicsBody?.material = PhysicsMaterialResource.generate(friction: 0.005, restitution: 0.1 * Float(i))
+            }
+            floor.position = [0, -0.4, -Float(count) / 2 * interval + interval * Float(i)]
+            floors.append(floor)
         }
-        floor.position = [0, -0.4, 0]
-        return floor
+        return floors
     }
     
 
+    func getIntensity(_ idx: Int) -> Double {
+        0.4 + (Double(idx) / Double(count)) * 0.6
+    }
 }
 
 #Preview(windowStyle: .volumetric) {
