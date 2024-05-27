@@ -12,7 +12,6 @@ import RealityKitContent
 struct ContentView: View {
     @State private var realityContent: RealityViewContent?
     @State private var balls: [Entity] = []
-    private let colorOptions: [UIColor] = [.gray, .red, .orange, .yellow, .green, .cyan, .blue, .purple, .magenta, .brown, .black]
     private let interval: Float = 0.03
     private let count = 10
     
@@ -44,9 +43,10 @@ struct ContentView: View {
     func initBalls() {
         if balls.isEmpty {
             for i in 0...count {
+                let intensity = Double(i) * 0.1
                 let ball = ModelEntity(
                     mesh: .generateSphere(radius: 0.01),
-                    materials: [SimpleMaterial(color: colorOptions[i % colorOptions.count], isMetallic: false)],
+                    materials: [SimpleMaterial(color: UIColor(red: 0, green: intensity, blue: 0, alpha: 1), isMetallic: false)],
                     collisionShape: .generateSphere(radius: 0.01),
                     mass: 0
                 )
@@ -85,7 +85,7 @@ struct ContentView: View {
         )
         if let _ = floor.physicsBody {
             print("Floor body")
-            floor.physicsBody?.material = PhysicsMaterialResource.generate(friction: 0.005, restitution: 1)
+            floor.physicsBody?.material = PhysicsMaterialResource.generate(friction: 0.005, restitution: 0.2)
         }
         floor.position = [0, -0.4, 0]
         return floor
