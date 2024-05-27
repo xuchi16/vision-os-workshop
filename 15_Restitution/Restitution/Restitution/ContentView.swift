@@ -13,7 +13,10 @@ struct ContentView: View {
     @State private var entity = Entity()
     @State private var balls: [[Entity]] = []
     private let interval: Float = 0.03
+    
+    // ################ Change this value 8 -> 10 for ideal elastic ################
     private let count = 8
+    // #############################################################################
     
     var body: some View {
         RealityView { content in
