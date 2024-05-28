@@ -13,7 +13,7 @@ struct ContentView: View {
     
     private static let degreeRange: Double = 10
     
-    @State var plane = Entity()
+    @State var object = Entity()
     @State private var rotationAngle: Double = -degreeRange
     
     var body: some View {
@@ -30,11 +30,11 @@ struct ContentView: View {
             plate.position = [0, -0.3, 0]
             content.add(plate)
             
-            // plane
-            plane = try! await Entity(named: "gramophone")
-            plane.scale = plane.scale * 0.4
-            plane.position = [0, -0.25, 0]
-            content.add(plane)
+            // Object
+            object = try! await Entity(named: "gramophone")
+            object.scale = object.scale * 0.4
+            object.position = [0, -0.25, 0]
+            content.add(object)
         }
         .rotation3DEffect(
             .degrees(rotationAngle),
