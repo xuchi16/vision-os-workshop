@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "gramophone.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "width" : 0.052548387096774188
+  }
+}
