@@ -21,4 +21,4 @@ A workshop for vision os development.
 | 14 | [Swing Rotation](14_Showcase) | ![s2](/14_Showcase/14_Showcase.png) | [X](https://x.com/xchester16/status/1792757295325319495) |
 | 15 | [Bounce](15_Restitution) | ![s2](/15_Restitution/15_Restitution.png) | [X](https://x.com/xchester16/status/1795097339587400103) |
 | 16 | [Friction](16_Friction) | ![s2](/16_Friction/16_Friction.png) | [X](https://x.com/xchester16/status/1795435700470616145) |
-| 17 | [Image Track](16_ImageTrack) | ![s2](/16_ImageTrack/16_ImageTrack.png) ||
+| 17 | [Image Track](16_ImageTrack) | ![s2](/16_ImageTrack/16_ImageTrack.png) | |
